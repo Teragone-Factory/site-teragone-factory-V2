@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { AnchorHTMLAttributes, ReactNode } from 'react'
 import { cn } from '@/lib/cn'
+import { route } from '@/lib/routes'
 
 type ButtonVariant = 'primary' | 'ghost' | 'outline'
 
@@ -21,7 +22,7 @@ const variants: Record<ButtonVariant, string> = {
 export function Button({ href, variant = 'primary', className, children, ...props }: ButtonProps) {
   return (
     <Link
-      href={href}
+      href={route(href)}
       className={cn(
         'inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition duration-200',
         variants[variant],
