@@ -4,6 +4,12 @@
 
 :root {
   color-scheme: dark;
+  --background: #0A0A0F;
+  --surface: #12121A;
+  --card: #1C1C28;
+  --primary: #3B82F6;
+  --secondary: #8B5CF6;
+  --cyan: #06B6D4;
 }
 
 html {
@@ -11,6 +17,36 @@ html {
 }
 
 body {
-  background: #0A0A0F;
+  background: var(--background);
   color: white;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.45);
+  color: white;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.04); }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 5s ease-in-out infinite;
 }
