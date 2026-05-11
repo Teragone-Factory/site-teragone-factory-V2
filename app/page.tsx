@@ -2,8 +2,11 @@ import { Footer } from '@/components/layout/Footer'
 import { NavBar } from '@/components/layout/NavBar'
 import { AnimatedHeroVisual } from '@/components/sections/AnimatedHeroVisual'
 import { CredibilitySection } from '@/components/sections/CredibilitySection'
+import { DeliveryMethod } from '@/components/sections/DeliveryMethod'
+import { DNASection } from '@/components/sections/DNASection'
 import { FinalCTA } from '@/components/sections/FinalCTA'
 import { ProofBar } from '@/components/sections/ProofBar'
+import { RecruitmentTeaser } from '@/components/sections/RecruitmentTeaser'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
@@ -103,6 +106,8 @@ export default function HomePage() {
           </div>
         </section>
 
+        <DeliveryMethod />
+
         <section className="border-y border-white/5 bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-28">
             <SectionHeading
@@ -122,6 +127,8 @@ export default function HomePage() {
         </section>
 
         <CredibilitySection />
+
+        <DNASection />
 
         <section className="mx-auto max-w-7xl px-6 py-28">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
@@ -154,6 +161,8 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <RecruitmentTeaser />
 
         <FinalCTA />
       </main>
