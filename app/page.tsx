@@ -2,6 +2,7 @@ import { Footer } from '@/components/layout/Footer'
 import { NavBar } from '@/components/layout/NavBar'
 import { AnimatedHeroVisual } from '@/components/sections/AnimatedHeroVisual'
 import { CredibilitySection } from '@/components/sections/CredibilitySection'
+import { FinalCTA } from '@/components/sections/FinalCTA'
 import { ProofBar } from '@/components/sections/ProofBar'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -153,6 +154,8 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <FinalCTA />
       </main>
 
       <Footer />
