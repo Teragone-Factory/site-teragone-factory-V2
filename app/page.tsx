@@ -1,6 +1,8 @@
 import { Footer } from '@/components/layout/Footer'
 import { NavBar } from '@/components/layout/NavBar'
 import { AnimatedHeroVisual } from '@/components/sections/AnimatedHeroVisual'
+import { CredibilitySection } from '@/components/sections/CredibilitySection'
+import { ProofBar } from '@/components/sections/ProofBar'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
@@ -84,16 +86,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="border-b border-white/5 py-6">
-          <div className="mx-auto flex max-w-7xl flex-wrap gap-5 px-6 text-xs uppercase tracking-[0.3em] text-zinc-500 md:text-sm">
-            <span>Squads seniors</span>
-            <span>AI Engineering</span>
-            <span>Software Craftsmanship</span>
-            <span>Web3 & Blockchain</span>
-            <span>Systèmes critiques</span>
-            <span>Delivery full remote</span>
-          </div>
-        </section>
+        <ProofBar />
 
         <section className="mx-auto max-w-7xl px-6 py-28">
           <SectionHeading
@@ -126,6 +119,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <CredibilitySection />
 
         <section className="mx-auto max-w-7xl px-6 py-28">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
