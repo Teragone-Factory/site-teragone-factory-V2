@@ -1,8 +1,11 @@
 import { Footer } from '@/components/layout/Footer'
 import { NavBar } from '@/components/layout/NavBar'
+import { AnimatedHeroVisual } from '@/components/sections/AnimatedHeroVisual'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
+import { Card } from '@/components/ui/Card'
 import { PillarCard } from '@/components/ui/PillarCard'
+import { SectionHeading } from '@/components/ui/SectionHeading'
 
 const pillars = [
   {
@@ -44,44 +47,45 @@ export default function HomePage() {
     <>
       <NavBar />
 
-      <main className="bg-background text-white">
-        <section className="relative overflow-hidden border-b border-white/5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.12),transparent_35%)]" />
+      <main className="overflow-hidden bg-background text-white">
+        <section className="relative border-b border-white/5">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.16),transparent_36%)]" />
 
-          <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-32">
-            <div className="flex flex-wrap gap-3">
-              <Badge label="AI Engineering" />
-              <Badge label="Web3" />
-              <Badge label="Software Craftsmanship" />
-              <Badge label="Distributed Systems" />
-            </div>
+          <div className="relative mx-auto grid max-w-7xl gap-20 px-6 py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <div className="mb-8 flex flex-wrap gap-3">
+                <Badge label="AI Engineering" />
+                <Badge label="Web3" />
+                <Badge label="Software Craftsmanship" />
+                <Badge label="Distributed Systems" />
+              </div>
 
-            <div className="max-w-5xl">
-              <h1 className="mb-8 font-display text-6xl font-bold leading-[1.05] tracking-tight md:text-8xl">
-                Construire des systèmes qui tiennent dans le temps.
+              <h1 className="max-w-5xl font-display text-6xl font-bold leading-[1.02] tracking-tight md:text-8xl">
+                AI-ready & agent-ready engineering.
               </h1>
 
-              <p className="max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">
-                Teragone Factory est la filiale digitale, IA et Web3 du groupe
-                Teragone Solutions. Nous concevons et délivrons des systèmes
-                logiciels complexes, robustes et durables avec des équipes
-                seniors spécialisées en AI Engineering, Software Craftsmanship
-                et architectures distribuées.
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">
+                Teragone Factory conçoit et délivre des systèmes logiciels
+                critiques, modernes et durables avec des équipes seniors
+                spécialisées en IA, software craftsmanship, plateformes
+                distribuées et architectures complexes.
               </p>
+
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Button href="/contact">Discutons de votre projet</Button>
+
+                <Button href="/expertises" variant="outline">
+                  Découvrir nos expertises
+                </Button>
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <Button href="/contact">Discutons de votre projet</Button>
-
-              <Button href="/expertises" variant="outline">
-                Découvrir nos expertises
-              </Button>
-            </div>
+            <AnimatedHeroVisual />
           </div>
         </section>
 
         <section className="border-b border-white/5 py-6">
-          <div className="mx-auto flex max-w-7xl flex-wrap gap-4 px-6 text-sm uppercase tracking-[0.25em] text-zinc-500">
+          <div className="mx-auto flex max-w-7xl flex-wrap gap-5 px-6 text-xs uppercase tracking-[0.3em] text-zinc-500 md:text-sm">
             <span>Squads seniors</span>
             <span>AI Engineering</span>
             <span>Software Craftsmanship</span>
@@ -92,17 +96,13 @@ export default function HomePage() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-28">
-          <div className="mb-16 flex flex-col gap-4">
-            <span className="text-sm uppercase tracking-[0.3em] text-primary">
-              Expertises
-            </span>
+          <SectionHeading
+            eyebrow="Expertises"
+            title="Des expertises conçues pour les environnements complexes."
+            description="Architecture, modernisation, IA, delivery et plateformes distribuées avec une approche engineering orientée production réelle."
+          />
 
-            <h2 className="font-display text-5xl font-bold tracking-tight">
-              Ce que nous faisons.
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
             {pillars.map((pillar) => (
               <PillarCard key={pillar.title} {...pillar} />
             ))}
@@ -111,53 +111,37 @@ export default function HomePage() {
 
         <section className="border-y border-white/5 bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-28">
-            <div className="mb-14 max-w-3xl">
-              <span className="text-sm uppercase tracking-[0.3em] text-primary">
-                Pourquoi Teragone Factory
-              </span>
+            <SectionHeading
+              eyebrow="Pourquoi Teragone Factory"
+              title="Engineering senior. Vision long terme."
+            />
 
-              <h2 className="mt-4 font-display text-5xl font-bold tracking-tight">
-                Engineering senior. Vision long terme.
-              </h2>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+            <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
               {differentiators.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-3xl border border-white/10 bg-card p-6"
-                >
+                <Card key={item}>
                   <div className="mb-6 h-10 w-10 rounded-full bg-primary/20" />
                   <p className="text-sm leading-7 text-zinc-300">{item}</p>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-28">
-          <div className="mb-10 flex items-end justify-between gap-6">
-            <div>
-              <span className="text-sm uppercase tracking-[0.3em] text-primary">
-                Use Cases
-              </span>
-
-              <h2 className="mt-4 font-display text-5xl font-bold tracking-tight">
-                Des projets réels. Des systèmes critiques.
-              </h2>
-            </div>
+          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+            <SectionHeading
+              eyebrow="Use Cases"
+              title="Des projets réels. Des systèmes critiques."
+            />
 
             <Button href="/use-cases" variant="ghost">
               Voir tous les cas clients →
             </Button>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
             {['Transport & mobilité', 'Plateforme IA enterprise', 'Blockchain & Web3'].map((title) => (
-              <div
-                key={title}
-                className="rounded-3xl border border-white/10 bg-card p-8"
-              >
+              <Card key={title}>
                 <span className="mb-4 inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
                   {title}
                 </span>
@@ -170,7 +154,7 @@ export default function HomePage() {
                   Audit, architecture, squads seniors, IA industrialisée et mise
                   en production sur des environnements complexes.
                 </p>
-              </div>
+              </Card>
             ))}
           </div>
         </section>
