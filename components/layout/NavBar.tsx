@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 import { MobileMenu } from '@/components/layout/MobileMenu'
 import { Button } from '@/components/ui/Button'
 import { route } from '@/lib/routes'
@@ -31,10 +32,7 @@ export function NavBar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <button className="rounded-full border border-white/10 px-3 py-2 text-xs text-zinc-300 transition hover:border-primary/40 hover:text-white">
-            FR / EN
-          </button>
-
+          <LanguageSwitcher />
           <Button href="/contact">Contact</Button>
         </div>
 
