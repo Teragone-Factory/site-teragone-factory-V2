@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Syne } from 'next/font/google'
+import { DM_Sans, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans' })
-const syne = Syne({ subsets: ['latin'], variable: '--font-syne' })
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://teragone-factory.github.io/site-teragone-factory-V2'),
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr">
-      <body className={`${dmSans.variable} ${syne.variable} bg-background text-white font-sans antialiased`}>
+      <body className={`${dmSans.variable} ${spaceGrotesk.variable} bg-background text-white font-sans antialiased`}>
         {children}
       </body>
     </html>
