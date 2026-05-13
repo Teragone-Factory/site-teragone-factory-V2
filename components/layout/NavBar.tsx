@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 import { MobileMenu } from '@/components/layout/MobileMenu'
+import { ThemeToggle } from '@/components/layout/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { route } from '@/lib/routes'
 
@@ -32,6 +33,7 @@ export function NavBar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <LanguageSwitcher />
           <Button href="/contact">Contact</Button>
         </div>
