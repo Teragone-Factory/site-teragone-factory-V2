@@ -1,7 +1,7 @@
 import { Footer } from '@/components/layout/Footer'
 import { NavBar } from '@/components/layout/NavBar'
 import { AnimatedHeroVisual } from '@/components/sections/AnimatedHeroVisual'
-import { FinalCTA } from '@/components/sections/FinalCTA'
+import { FinalCTAEn } from '@/components/sections/en/FinalCTAEn'
 import { ProofBar } from '@/components/sections/ProofBar'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -201,7 +201,7 @@ export default function EnglishHomePage() {
           </div>
         </section>
 
-        <FinalCTA />
+        <FinalCTAEn />
       </main>
 
       <Footer />
