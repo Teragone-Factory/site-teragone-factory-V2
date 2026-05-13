@@ -38,6 +38,16 @@ body {
   transition: background-color 220ms ease, color 220ms ease;
 }
 
+h1, h2, h3, .font-display {
+  font-family: var(--font-display), var(--font-dm-sans), system-ui, sans-serif !important;
+  letter-spacing: -0.055em;
+  font-weight: 650;
+}
+
+h1 {
+  line-height: 0.98;
+}
+
 ::selection {
   background: rgba(59, 130, 246, 0.45);
   color: white;
