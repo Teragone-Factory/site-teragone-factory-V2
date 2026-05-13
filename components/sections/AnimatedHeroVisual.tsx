@@ -1,39 +1,47 @@
-const nodes = [
-  { label: 'AI Agent', detail: 'Reason · Act', position: 'left-[8%] top-[16%]' },
-  { label: 'Web App', detail: 'UX · Workflow', position: 'right-[8%] top-[18%]' },
-  { label: 'Business API', detail: 'Data · Tools', position: 'left-[8%] bottom-[18%]' },
-  { label: 'Web3 Layer', detail: 'Trust · Assets', position: 'right-[8%] bottom-[18%]' },
-]
-
 export function AnimatedHeroVisual() {
   return (
-    <div className="pointer-events-none relative h-[440px] overflow-hidden rounded-[2rem] border border-white/10 bg-card shadow-2xl shadow-primary/10">
-      <div className="absolute inset-0 bg-grid opacity-25" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(59,130,246,0.28),transparent_30%),radial-gradient(circle_at_75%_70%,rgba(139,92,246,0.24),transparent_32%),radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.18),transparent_38%)]" />
+    <div className="pointer-events-none relative h-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-card shadow-2xl shadow-primary/10">
+      <div className="absolute inset-0 bg-grid opacity-20" />
 
-      <div className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-[2rem] border border-primary/30 bg-background/70 p-6 backdrop-blur-xl shadow-[0_0_60px_rgba(59,130,246,0.22)] animate-glow-pulse">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/20 text-primary">
-          AI
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(59,130,246,0.16),transparent_34%),radial-gradient(circle_at_80%_75%,rgba(139,92,246,0.14),transparent_30%),radial-gradient(circle_at_20%_75%,rgba(6,182,212,0.12),transparent_28%)]" />
+
+      <div className="absolute left-1/2 top-[44%] flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary/40 bg-primary/10 backdrop-blur-xl shadow-[0_0_70px_rgba(59,130,246,0.22)]">
+        <div className="text-center">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cyan">AI Core</p>
+          <p className="mt-1 text-xs text-zinc-400">LLM · Agents</p>
         </div>
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan">Agentic Core</p>
-        <p className="mt-3 text-sm leading-6 text-zinc-400">Orchestration · Memory · Tools · Governance</p>
       </div>
 
-      <div className="absolute left-[20%] top-[28%] h-px w-[60%] bg-gradient-to-r from-primary/0 via-primary/70 to-cyan/0" />
-      <div className="absolute left-[20%] bottom-[30%] h-px w-[60%] bg-gradient-to-r from-secondary/0 via-secondary/70 to-primary/0" />
-      <div className="absolute left-1/2 top-[22%] h-[58%] w-px bg-gradient-to-b from-cyan/0 via-cyan/50 to-primary/0" />
-      <div className="absolute left-[25%] top-[22%] h-[56%] w-[50%] rounded-full border border-primary/20" />
+      <div className="absolute left-[10%] top-[18%] rounded-2xl border border-white/10 bg-background/80 px-5 py-4 backdrop-blur-xl">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white">AI Agents</p>
+        <p className="mt-1 text-xs text-zinc-400">reason · automate · execute</p>
+      </div>
 
-      {nodes.map((node) => (
-        <div key={node.label} className={`animate-float-slow absolute ${node.position} rounded-2xl border border-white/10 bg-background/75 px-4 py-3 backdrop-blur-xl shadow-xl`}>
-          <p className="font-mono text-xs uppercase tracking-[0.22em] text-white">{node.label}</p>
-          <p className="mt-1 text-xs text-zinc-400">{node.detail}</p>
-        </div>
-      ))}
+      <div className="absolute right-[10%] top-[18%] rounded-2xl border border-white/10 bg-background/80 px-5 py-4 backdrop-blur-xl">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white">Web Apps</p>
+        <p className="mt-1 text-xs text-zinc-400">products · workflows · UX</p>
+      </div>
 
-      <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/10 bg-background/75 p-5 backdrop-blur-xl">
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan">AI × Agents × Web3 systems</p>
-        <p className="mt-2 text-sm text-zinc-400">We connect intelligent agents, business platforms and trusted Web3 infrastructure into production-ready systems.</p>
+      <div className="absolute left-[10%] bottom-[25%] rounded-2xl border border-white/10 bg-background/80 px-5 py-4 backdrop-blur-xl">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white">Business APIs</p>
+        <p className="mt-1 text-xs text-zinc-400">data · tools · systems</p>
+      </div>
+
+      <div className="absolute right-[10%] bottom-[25%] rounded-2xl border border-white/10 bg-background/80 px-5 py-4 backdrop-blur-xl">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white">Web3 Network</p>
+        <p className="mt-1 text-xs text-zinc-400">wallet · chain · trust</p>
+      </div>
+
+      <div className="absolute left-[30%] top-[28%] h-px w-[18%] bg-gradient-to-r from-cyan/0 via-cyan/70 to-primary/0" />
+      <div className="absolute right-[30%] top-[28%] h-px w-[18%] bg-gradient-to-r from-primary/0 via-primary/70 to-cyan/0" />
+      <div className="absolute left-[30%] bottom-[33%] h-px w-[18%] bg-gradient-to-r from-secondary/0 via-secondary/70 to-primary/0" />
+      <div className="absolute right-[30%] bottom-[33%] h-px w-[18%] bg-gradient-to-r from-primary/0 via-secondary/70 to-secondary/0" />
+
+      <div className="absolute bottom-7 left-7 right-7 rounded-2xl border border-white/10 bg-background/75 p-5 backdrop-blur-xl">
+        <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan">AI × Agents × Web3</p>
+        <p className="mt-2 text-sm leading-6 text-zinc-400">
+          Intelligent agents connected to enterprise systems, modern web platforms and trusted blockchain infrastructure.
+        </p>
       </div>
     </div>
   )
