@@ -10,6 +10,22 @@
   --primary: #3B82F6;
   --secondary: #8B5CF6;
   --cyan: #06B6D4;
+  --text: #FFFFFF;
+  --muted: #A1A1AA;
+  --border: rgba(255,255,255,0.1);
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --card: #FFFFFF;
+  --primary: #2563EB;
+  --secondary: #7C3AED;
+  --cyan: #0891B2;
+  --text: #0F172A;
+  --muted: #475569;
+  --border: rgba(15,23,42,0.12);
 }
 
 html {
@@ -18,7 +34,8 @@ html {
 
 body {
   background: var(--background);
-  color: white;
+  color: var(--text);
+  transition: background-color 220ms ease, color 220ms ease;
 }
 
 ::selection {
@@ -31,6 +48,12 @@ body {
     linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
   background-size: 48px 48px;
+}
+
+html[data-theme='light'] .bg-grid {
+  background-image:
+    linear-gradient(rgba(15,23,42,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,0.05) 1px, transparent 1px);
 }
 
 @keyframes float-slow {
@@ -49,4 +72,18 @@ body {
 
 .animate-glow-pulse {
   animation: glow-pulse 5s ease-in-out infinite;
+}
+
+.input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--background);
+  padding: 1rem;
+  color: var(--text);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
 }
