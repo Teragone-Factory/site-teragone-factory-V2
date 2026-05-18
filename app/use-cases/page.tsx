@@ -31,13 +31,14 @@ const cases = [
       'Capacités IA intégrées durablement aux workflows métiers avec une approche contrôlée et industrialisable.',
   },
   {
-    sector: 'Blockchain',
-    pillar: 'Web3 & Distributed Systems',
-    problem: 'Optimisation de synchronisation et accès fiable à l’état réseau.',
+    sector: 'Blockchain Infrastructure',
+    pillar: 'Mithril Protocol',
+    thumbnail: '/mithril-logo.png',
+    problem: 'Mithril : certification légère et synchronisation rapide d’un réseau blockchain.',
     intervention:
-      'Travaux sur validation légère, snapshots certifiés, protocol engineering, outillage développeur et architecture distribuée.',
+      'Conception et développement d’un protocole de certification distribuée permettant de produire des snapshots vérifiables, de réduire les temps de synchronisation et d’améliorer l’accès fiable à l’état réseau sans dépendre d’une infrastructure lourde.',
     results:
-      'Amélioration des performances réseau, réduction des coûts d’infrastructure et meilleure vérifiabilité.',
+      'Réduction drastique du temps de bootstrap des nœuds, meilleure résilience réseau, validation légère, distribution fiable de snapshots certifiés et amélioration de l’expérience développeur et opérateur sur des infrastructures blockchain à grande échelle.',
   },
   {
     sector: 'Software Platform',
