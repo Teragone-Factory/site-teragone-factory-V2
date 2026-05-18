@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Notre ADN',
-  description: 'Software craftsmanship, culture engineering, IA, delivery senior et systèmes distribués.',
+  description: 'Software craftsmanship, AI engineering, culture engineering, delivery senior et systèmes distribués.',
 }
 
 const pillars = [
@@ -15,24 +15,24 @@ const pillars = [
     text: 'Qualité logicielle, lisibilité, maintenabilité, excellence engineering et capacité à faire évoluer les systèmes dans le temps.',
   },
   {
+    title: 'AI Engineering',
+    text: 'L’IA est une pratique de delivery à part entière : assistance au développement, tests, documentation, refactoring, analyse de code et automatisation maîtrisée.',
+  },
+  {
     title: 'AI-ready Systems',
-    text: 'Des plateformes pensées pour intégrer durablement l’IA, les agents, l’automatisation et les nouveaux usages.',
+    text: 'Des plateformes pensées pour intégrer durablement l’IA, les agents, l’automatisation et les nouveaux usages dans des environnements production-grade.',
   },
   {
     title: 'Delivery & Ownership',
-    text: 'Des équipes seniors orientées résultat, impact métier, production et prise de responsabilité.',
-  },
-  {
-    title: 'Transmission',
-    text: 'Documentation, partage de connaissance, montée en compétence et collaboration avec les équipes internes.',
+    text: 'Des équipes seniors orientées résultat, impact métier, production et prise de responsabilité sur la qualité comme sur la trajectoire long terme.',
   },
   {
     title: 'Architecture Thinking',
-    text: 'Prendre du recul sur les systèmes, les flux, les organisations et les contraintes long terme.',
+    text: 'Prendre du recul sur les systèmes, les flux, les organisations, les données et les contraintes long terme avant de construire.',
   },
   {
-    title: 'Pragmatisme',
-    text: 'Choisir les bonnes technologies au bon moment avec une approche concrète et durable.',
+    title: 'Transmission & pragmatisme',
+    text: 'Documenter, transmettre, faire monter les équipes en compétence et choisir les bonnes technologies au bon moment, sans dogmatisme.',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function NotreADNPage() {
       <main className="mx-auto max-w-7xl px-6 py-24 text-white">
         <span className="text-sm uppercase tracking-[0.3em] text-primary">Notre ADN</span>
         <h1 className="mt-4 max-w-5xl font-display text-6xl font-bold tracking-tight">Engineering culture first.</h1>
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">Teragone Factory est construite autour d’une conviction simple : les systèmes critiques nécessitent des équipes seniors, une culture engineering forte et une vision long terme.</p>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">Teragone Factory est construite autour d’une conviction simple : les systèmes critiques nécessitent des équipes seniors, une culture engineering forte, des pratiques AI engineering maîtrisées et une vision long terme.</p>
         <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {pillars.map((item) => (
             <Card key={item.title}>
@@ -55,7 +55,7 @@ export default function NotreADNPage() {
         <section className="mt-24 rounded-[2rem] border border-white/10 bg-card p-10 md:p-16">
           <span className="text-sm uppercase tracking-[0.3em] text-primary">Notre vision</span>
           <h2 className="mt-4 max-w-4xl font-display text-5xl font-bold tracking-tight">Construire des systèmes modernes, observables, AI-ready et durables.</h2>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">Nous croyons à une approche où architecture, delivery, qualité logicielle et impact métier doivent fonctionner ensemble. Notre objectif n’est pas seulement de délivrer vite, mais de construire des plateformes capables d’évoluer durablement.</p>
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">Nous croyons à une approche où architecture, delivery, qualité logicielle, AI engineering et impact métier doivent fonctionner ensemble. Notre objectif n’est pas seulement de délivrer vite, mais de construire des plateformes capables d’évoluer durablement.</p>
         </section>
       </main>
       <FinalCTA />
