@@ -9,6 +9,7 @@ const links = [
   { href: '/expertises', label: 'Expertises' },
   { href: '/use-cases', label: 'Use Cases' },
   { href: '/notre-adn', label: 'Notre ADN' },
+  { href: '/blog', label: 'Blog' },
   { href: '/nous-rejoindre', label: 'Rejoindre' },
 ]
 
@@ -20,7 +21,7 @@ export function NavBar() {
           Teragone Factory
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
