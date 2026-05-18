@@ -3,6 +3,13 @@ import { route } from '@/lib/routes'
 
 const articles = [
   {
+    slug: 'ai-web3-agentic-engineering',
+    category: 'AI Engineering · Web3',
+    title: 'Why AI Engineering, Web3 and Software Craftsmanship are converging',
+    excerpt:
+      'AI agents, decentralized systems and modern software engineering are starting to merge into a new generation of trusted, actionable platforms.',
+  },
+  {
     slug: 'agentic-computing-protocols',
     category: 'Agentic AI · Protocols',
     title: 'Towards agentic computing: why protocols will change everything',
@@ -22,13 +29,6 @@ const articles = [
     title: 'Why specification could become the new strategic layer of software engineering',
     excerpt:
       'As AI accelerates software delivery, specification may become the true differentiator between scalable engineering organizations and fragile AI-generated systems.',
-  },
-  {
-    slug: 'ai-web3-agentic-engineering',
-    category: 'AI Engineering · Web3',
-    title: 'Why AI Engineering, Web3 and Software Craftsmanship are converging',
-    excerpt:
-      'AI agents, decentralized systems and modern software engineering are starting to merge into a new generation of trusted, actionable platforms.',
   },
 ]
 
