@@ -3,6 +3,13 @@ import { route } from '@/lib/routes'
 
 const articles = [
   {
+    slug: 'specification-as-the-new-software-contract',
+    category: 'Specification · AI Engineering',
+    title: 'Why specification could become the new strategic layer of software engineering',
+    excerpt:
+      'As AI accelerates software delivery, specification may become the true differentiator between scalable engineering organizations and fragile AI-generated systems.',
+  },
+  {
     slug: 'ai-web3-agentic-engineering',
     category: 'AI Engineering · Web3',
     title: 'Why AI Engineering, Web3 and Software Craftsmanship are converging',
