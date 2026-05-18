@@ -8,6 +8,7 @@ const links = [
   { href: '/expertises', label: 'Expertises' },
   { href: '/use-cases', label: 'Use Cases' },
   { href: '/notre-adn', label: 'Notre ADN' },
+  { href: '/advisory-board', label: 'Advisory Board' },
   { href: '/nous-rejoindre', label: 'Rejoindre' },
   { href: '/contact', label: 'Contact' },
 ]
