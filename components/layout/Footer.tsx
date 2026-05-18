@@ -1,10 +1,21 @@
 import Link from 'next/link'
 import { route } from '@/lib/routes'
 
+const socialLinks = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/teragone-factory/',
+  },
+  {
+    label: 'X / Twitter',
+    href: 'https://x.com/TeragoneFactory',
+  },
+]
+
 export function Footer() {
   return (
     <footer className="border-t border-white/5 bg-[#09090D]">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.3fr_0.7fr]">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.3fr_0.7fr_0.7fr]">
         <div>
           <h3 className="mb-4 font-display text-3xl font-bold text-white">
             Teragone Factory
@@ -28,7 +39,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-3 text-sm text-zinc-400">
+        <div className="grid content-start gap-3 text-sm text-zinc-400">
+          <p className="mb-2 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">Navigation</p>
+
           <Link href={route('/expertises')} className="transition hover:text-white">
             Expertises
           </Link>
@@ -39,6 +52,10 @@ export function Footer() {
 
           <Link href={route('/notre-adn')} className="transition hover:text-white">
             Notre ADN
+          </Link>
+
+          <Link href={route('/blog')} className="transition hover:text-white">
+            Blog
           </Link>
 
           <Link href={route('/nous-rejoindre')} className="transition hover:text-white">
@@ -52,6 +69,29 @@ export function Footer() {
           <Link href={route('/mentions-legales')} className="transition hover:text-white">
             Mentions légales
           </Link>
+        </div>
+
+        <div className="content-start text-sm text-zinc-400">
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">Social</p>
+
+          <div className="flex flex-col gap-3">
+            {socialLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 transition hover:border-primary/40 hover:bg-white/[0.06] hover:text-white"
+              >
+                <span>{link.label}</span>
+                <span className="text-primary transition group-hover:translate-x-1">→</span>
+              </a>
+            ))}
+          </div>
+
+          <p className="mt-6 text-xs leading-6 text-zinc-600">
+            Suivez nos publications sur l’AI Engineering, le Web3, les systèmes distribués et le software craftsmanship.
+          </p>
         </div>
       </div>
 
