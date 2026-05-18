@@ -53,11 +53,11 @@ const pillars = [
 ]
 
 const differentiators = [
-  'Expertise senior sur des enjeux critiques',
-  'IA intégrée dans les architectures existantes',
-  'Approche orientée pérennité et gouvernance',
-  'Focus production réelle et delivery',
-  'Standards élevés de qualité logicielle',
+  ['01', 'Senior expertise', 'Des profils expérimentés sur des enjeux critiques, capables de décider vite et juste.'],
+  ['02', 'AI inside', 'L’IA est intégrée dans les pratiques, les architectures et les workflows de delivery.'],
+  ['03', 'Long-term thinking', 'Des choix pensés pour la maintenabilité, la gouvernance et l’évolution des plateformes.'],
+  ['04', 'Production focus', 'Une obsession simple : livrer des systèmes fiables, observables et exploitables en production.'],
+  ['05', 'Craft quality', 'Des standards élevés de qualité logicielle, tests, documentation et transmission.'],
 ]
 
 export default function HomePage() {
@@ -131,20 +131,27 @@ export default function HomePage() {
 
         <DeliveryMethod />
 
-        <section className="border-y border-white/5 bg-surface">
-          <div className="mx-auto max-w-7xl px-6 py-28">
-            <SectionHeading
-              eyebrow="Pourquoi Teragone Factory"
-              title="Engineering senior. Vision long terme."
-            />
-
-            <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-              {differentiators.map((item) => (
-                <Card key={item}>
-                  <div className="mb-6 h-10 w-10 rounded-full bg-primary/20" />
-                  <p className="text-sm leading-7 text-zinc-300">{item}</p>
-                </Card>
-              ))}
+        <section className="relative border-y border-white/5 bg-surface">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_85%_70%,rgba(139,92,246,0.10),transparent_35%)]" />
+          <div className="relative mx-auto max-w-7xl px-6 py-28">
+            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+              <div>
+                <span className="text-sm uppercase tracking-[0.3em] text-primary">Pourquoi Teragone Factory</span>
+                <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">Engineering senior. Vision long terme.</h2>
+                <p className="mt-6 text-lg leading-8 text-zinc-400">Nous combinons exigence craft, AI engineering et culture production pour aider les équipes à construire mieux, plus vite et plus durablement.</p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                {differentiators.map(([number, title, text]) => (
+                  <div key={title} className="group rounded-[1.7rem] border border-white/10 bg-card p-6 transition hover:-translate-y-1 hover:border-primary/40 hover:bg-white/[0.04]">
+                    <div className="mb-6 flex items-center justify-between">
+                      <span className="font-mono text-xs uppercase tracking-[0.24em] text-primary">{number}</span>
+                      <div className="h-10 w-10 rounded-2xl bg-primary/15" />
+                    </div>
+                    <h3 className="font-display text-2xl font-semibold text-white">{title}</h3>
+                    <p className="mt-3 leading-7 text-zinc-400">{text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
