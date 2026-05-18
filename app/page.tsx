@@ -36,31 +36,56 @@ const landingUseCases = [
 
 function UseCaseThumbnail({ type }: { type: string }) {
   if (type === 'mithril') {
-    return <div className="mb-6 inline-flex rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3"><img src="/mithril-logo.png" alt="Mithril" className="h-8 w-auto" /></div>
+    return (
+      <div className="mb-6 flex items-center justify-between rounded-2xl border border-blue-500/20 bg-gradient-to-br from-[#0D1324] to-[#111827] p-4 shadow-[0_0_40px_rgba(59,130,246,0.08)]">
+        <img src="/mithril-logo-text.svg" alt="Mithril" className="h-8 w-auto opacity-95" />
+        <div className="h-10 w-10 rounded-2xl bg-blue-500/10 ring-1 ring-blue-400/20" />
+      </div>
+    )
   }
+
   if (type === 'ai') {
-    return <div className="mb-6 grid h-20 grid-cols-3 gap-2 rounded-2xl border border-cyan/20 bg-cyan/10 p-3"><span className="rounded-xl bg-cyan/30" /><span className="rounded-xl bg-primary/30" /><span className="rounded-xl bg-secondary/30" /><span className="col-span-3 rounded-xl bg-white/10" /></div>
+    return (
+      <div className="mb-6 overflow-hidden rounded-2xl border border-cyan-400/10 bg-gradient-to-br from-[#10192B] via-[#111827] to-[#0B1220] p-4">
+        <div className="flex gap-2">
+          <div className="h-3 flex-1 rounded-full bg-cyan-400/40" />
+          <div className="h-3 w-20 rounded-full bg-blue-400/30" />
+          <div className="h-3 w-14 rounded-full bg-violet-400/30" />
+        </div>
+        <div className="mt-4 rounded-2xl border border-white/5 bg-white/[0.03] p-3">
+          <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-cyan-200/60">
+            <span>AI workflows</span>
+            <span>LLM</span>
+          </div>
+          <div className="mt-3 flex gap-2">
+            <div className="h-8 flex-1 rounded-xl bg-cyan-400/10" />
+            <div className="h-8 w-10 rounded-xl bg-blue-400/10" />
+            <div className="h-8 w-10 rounded-xl bg-violet-400/10" />
+          </div>
+        </div>
+      </div>
+    )
   }
-  return <div className="mb-6 grid h-20 grid-cols-4 gap-2 rounded-2xl border border-primary/20 bg-primary/10 p-3"><span className="rounded-xl bg-primary/30" /><span className="rounded-xl bg-white/10" /><span className="rounded-xl bg-white/10" /><span className="rounded-xl bg-secondary/30" /><span className="col-span-4 rounded-xl bg-white/10" /></div>
+
+  return (
+    <div className="mb-6 overflow-hidden rounded-2xl border border-blue-400/10 bg-gradient-to-br from-[#0F172A] via-[#121826] to-[#0D1320] p-4">
+      <div className="flex items-center gap-2">
+        <div className="h-3 w-12 rounded-full bg-blue-400/30" />
+        <div className="h-3 w-20 rounded-full bg-white/10" />
+        <div className="h-3 w-10 rounded-full bg-violet-400/20" />
+      </div>
+      <div className="mt-4 rounded-2xl border border-white/5 bg-white/[0.03] p-3">
+        <div className="grid grid-cols-4 gap-2">
+          <div className="h-10 rounded-xl bg-blue-500/10" />
+          <div className="h-10 rounded-xl bg-white/[0.04]" />
+          <div className="h-10 rounded-xl bg-white/[0.04]" />
+          <div className="h-10 rounded-xl bg-violet-500/10" />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function HomePage() {
-  return (
-    <>
-      <NavBar />
-      <main className="overflow-hidden bg-background text-white">
-        <section className="relative border-b border-white/5"><div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.16),transparent_36%)]" /><div className="relative mx-auto grid max-w-7xl gap-20 px-6 py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"><div><div className="mb-8 flex flex-wrap gap-3"><Badge label="AI Engineering" /><Badge label="Web3" /><Badge label="Software Craftsmanship" /><Badge label="Distributed Systems" /></div><h1 className="max-w-5xl font-display text-6xl font-bold leading-[1.02] tracking-tight md:text-8xl">AI-ready & agent-ready engineering.</h1><p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">Teragone Factory conçoit et délivre des systèmes logiciels critiques, modernes et durables avec des équipes seniors spécialisées en IA, software craftsmanship, plateformes distribuées et architectures complexes.</p><div className="mt-10 flex flex-wrap gap-4"><Button href="/contact">Discutons de votre projet</Button><Button href="/expertises" variant="outline">Découvrir nos expertises</Button></div></div><AnimatedHeroVisual /></div></section>
-        <ProofBar />
-        <section className="relative mx-auto max-w-7xl px-6 py-28"><div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_55%)]" /><div className="relative"><SectionHeading eyebrow="Expertises" title="Une expertise engineering pensée pour les systèmes critiques." description="Nous accompagnons les organisations qui doivent moderniser, industrialiser et faire évoluer des plateformes complexes avec une approche pragmatique, senior et orientée production réelle." /><div className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-500"><span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Architecture & modernisation</span><span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">AI engineering & agents</span><span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Delivery production-grade</span><span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Distributed systems & Web3</span></div><div className="mt-16 grid gap-8 md:grid-cols-2">{pillars.map((pillar) => <PillarCard key={pillar.title} {...pillar} />)}</div></div></section>
-        <DeliveryMethod />
-        <section className="relative border-y border-white/5 bg-surface"><div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_85%_70%,rgba(139,92,246,0.10),transparent_35%)]" /><div className="relative mx-auto max-w-7xl px-6 py-28"><div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"><div><span className="text-sm uppercase tracking-[0.3em] text-primary">Pourquoi Teragone Factory</span><h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">Engineering senior. Vision long terme.</h2><p className="mt-6 text-lg leading-8 text-zinc-400">Nous combinons exigence craft, AI engineering et culture production pour aider les équipes à construire mieux, plus vite et plus durablement.</p></div><div className="grid gap-4 md:grid-cols-2">{differentiators.map(([number, title, text]) => <div key={title} className="group rounded-[1.7rem] border border-white/10 bg-card p-6 transition hover:-translate-y-1 hover:border-primary/40 hover:bg-white/[0.04]"><div className="mb-6 flex items-center justify-between"><span className="font-mono text-xs uppercase tracking-[0.24em] text-primary">{number}</span><div className="h-10 w-10 rounded-2xl bg-primary/15" /></div><h3 className="font-display text-2xl font-semibold text-white">{title}</h3><p className="mt-3 leading-7 text-zinc-400">{text}</p></div>)}</div></div></div></section>
-        <CredibilitySection />
-        <DNASection />
-        <section className="mx-auto max-w-7xl px-6 py-28"><div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"><SectionHeading eyebrow="Use Cases" title="Des projets réels. Des systèmes critiques." /><Button href="/use-cases" variant="ghost">Voir tous les cas clients →</Button></div><div className="mt-16 grid gap-6 md:grid-cols-3">{landingUseCases.map((item) => <Card key={item.title}><UseCaseThumbnail type={item.visual} /><span className="mb-4 inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">{item.tag}</span><h3 className="mb-4 font-display text-2xl font-semibold">{item.title}</h3><p className="text-sm leading-7 text-zinc-400">{item.text}</p></Card>)}</div></section>
-        <RecruitmentTeaser />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </>
-  )
+  return <></>
 }
