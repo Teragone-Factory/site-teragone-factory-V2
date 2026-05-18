@@ -1,17 +1,10 @@
 import { Footer } from '@/components/layout/Footer'
 import { NavBar } from '@/components/layout/NavBar'
-import { AnimatedHeroVisual } from '@/components/sections/AnimatedHeroVisual'
-import { CredibilitySection } from '@/components/sections/CredibilitySection'
-import { DeliveryMethod } from '@/components/sections/DeliveryMethod'
-import { DNASection } from '@/components/sections/DNASection'
-import { FinalCTA } from '@/components/sections/FinalCTA'
-import { ProofBar } from '@/components/sections/ProofBar'
-import { RecruitmentTeaser } from '@/components/sections/RecruitmentTeaser'
-import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
-import { PillarCard } from '@/components/ui/PillarCard'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+
+const assetPath = process.env.NODE_ENV === 'production' ? '/site-teragone-factory-V2' : ''
 
 const landingUseCases = [
   { tag: 'Transport & mobilité', title: 'Modernisation et delivery à forte criticité.', text: 'Audit, architecture, squads seniors et mise en production sur des environnements complexes.', visual: 'legacy' },
@@ -22,50 +15,33 @@ const landingUseCases = [
 function UseCaseThumbnail({ type }: { type: string }) {
   if (type === 'mithril') {
     return (
-      <div className="mb-6 flex items-center justify-between rounded-2xl border border-blue-500/20 bg-gradient-to-br from-[#0D1324] to-[#111827] p-4 shadow-[0_0_40px_rgba(59,130,246,0.08)]">
-        <img src="/mithril-logo-text.svg" alt="Mithril" className="h-8 w-auto opacity-95" />
-        <div className="h-10 w-10 rounded-2xl bg-blue-500/10 ring-1 ring-blue-400/20" />
+      <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-500/20 bg-gradient-to-br from-[#101827] via-[#111827] to-[#0B1020] p-5">
+        <img src={`${assetPath}/mithril-logo-text.svg`} alt="Mithril" className="h-9 w-auto opacity-100" />
       </div>
     )
   }
 
   if (type === 'ai') {
     return (
-      <div className="mb-6 overflow-hidden rounded-2xl border border-cyan-400/10 bg-gradient-to-br from-[#10192B] via-[#111827] to-[#0B1220] p-4">
-        <div className="flex gap-2">
-          <div className="h-3 flex-1 rounded-full bg-cyan-400/40" />
-          <div className="h-3 w-20 rounded-full bg-blue-400/30" />
-          <div className="h-3 w-14 rounded-full bg-violet-400/30" />
-        </div>
-        <div className="mt-4 rounded-2xl border border-white/5 bg-white/[0.03] p-3">
-          <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-cyan-200/60">
-            <span>AI workflows</span>
-            <span>LLM</span>
-          </div>
-          <div className="mt-3 flex gap-2">
-            <div className="h-8 flex-1 rounded-xl bg-cyan-400/10" />
-            <div className="h-8 w-10 rounded-xl bg-blue-400/10" />
-            <div className="h-8 w-10 rounded-xl bg-violet-400/10" />
-          </div>
+      <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-cyan-400/15 bg-gradient-to-br from-[#0D1725] via-[#101827] to-[#11152A] p-5">
+        <div className="relative h-20 w-full max-w-[220px]">
+          <div className="absolute left-0 top-7 rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-cyan-200">Data</div>
+          <div className="absolute left-1/2 top-1 -translate-x-1/2 rounded-2xl border border-blue-400/35 bg-blue-400/10 px-5 py-3 text-xs font-semibold text-blue-100">AI Core</div>
+          <div className="absolute right-0 top-7 rounded-xl border border-violet-400/30 bg-violet-400/10 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-violet-200">Workflow</div>
+          <div className="absolute left-[62px] top-10 h-px w-12 bg-cyan-300/40" />
+          <div className="absolute right-[78px] top-10 h-px w-12 bg-violet-300/40" />
         </div>
       </div>
     )
   }
 
   return (
-    <div className="mb-6 overflow-hidden rounded-2xl border border-blue-400/10 bg-gradient-to-br from-[#0F172A] via-[#121826] to-[#0D1320] p-4">
-      <div className="flex items-center gap-2">
-        <div className="h-3 w-12 rounded-full bg-blue-400/30" />
-        <div className="h-3 w-20 rounded-full bg-white/10" />
-        <div className="h-3 w-10 rounded-full bg-violet-400/20" />
-      </div>
-      <div className="mt-4 rounded-2xl border border-white/5 bg-white/[0.03] p-3">
-        <div className="grid grid-cols-4 gap-2">
-          <div className="h-10 rounded-xl bg-blue-500/10" />
-          <div className="h-10 rounded-xl bg-white/[0.04]" />
-          <div className="h-10 rounded-xl bg-white/[0.04]" />
-          <div className="h-10 rounded-xl bg-violet-500/10" />
-        </div>
+    <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-400/15 bg-gradient-to-br from-[#0E1726] via-[#111827] to-[#101223] p-5">
+      <div className="relative h-20 w-full max-w-[220px]">
+        <div className="absolute left-0 top-2 h-14 w-16 rounded-2xl border border-blue-400/25 bg-blue-400/10" />
+        <div className="absolute left-[78px] top-8 h-px w-16 bg-blue-300/35" />
+        <div className="absolute right-0 top-2 h-14 w-16 rounded-2xl border border-violet-400/25 bg-violet-400/10" />
+        <div className="absolute left-1/2 bottom-0 -translate-x-1/2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-zinc-300">Modernize</div>
       </div>
     </div>
   )
