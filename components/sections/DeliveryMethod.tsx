@@ -1,18 +1,36 @@
-import { DeliveryTimeline } from '@/components/sections/DeliveryTimeline'
-import { SectionHeading } from '@/components/ui/SectionHeading'
+const steps = [
+  ['01', 'Diagnostiquer', 'Architecture, code, dette, risques et opportunités business.'],
+  ['02', 'Concevoir', 'Trajectoire cible, priorités, architecture AI-ready et gouvernance.'],
+  ['03', 'Délivrer', 'Squad senior, AI engineering, CI/CD, observabilité et mise en production.'],
+  ['04', 'Transmettre', 'Documentation, standards, pratiques et montée en compétence des équipes.'],
+]
 
 export function DeliveryMethod() {
   return (
-    <section className="border-y border-white/5 bg-surface">
-      <div className="mx-auto max-w-7xl px-6 py-28">
-        <SectionHeading
-          eyebrow="Méthode"
-          title="De l'audit à la production, sans perdre l'exigence engineering."
-          description="Notre approche combine cadrage rapide, architecture pragmatique, delivery senior et transmission pour sécuriser les systèmes critiques dans la durée."
-        />
-
-        <div className="mt-16">
-          <DeliveryTimeline />
+    <section className="relative border-y border-white/5 bg-surface">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.10),transparent_35%),radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.10),transparent_35%)]" />
+      <div className="relative mx-auto max-w-7xl px-6 py-28">
+        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <span className="text-sm uppercase tracking-[0.3em] text-primary">Méthode</span>
+            <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">De l’audit à la production, avec une trajectoire claire.</h2>
+            <p className="mt-6 text-lg leading-8 text-zinc-400">Une approche simple à lire, senior à l’exécution : comprendre vite, décider juste, livrer proprement et transmettre durablement.</p>
+            <div className="mt-8 rounded-3xl border border-white/10 bg-background/70 p-6 backdrop-blur-xl">
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan">Résultat attendu</p>
+              <p className="mt-3 text-zinc-300">Moins d’ambiguïté, moins de dette, plus de vitesse utile et une plateforme réellement pilotable en production.</p>
+            </div>
+          </div>
+          <div className="grid gap-4">
+            {steps.map(([number, title, text]) => (
+              <div key={title} className="group grid gap-5 rounded-[1.5rem] border border-white/10 bg-card p-5 transition hover:border-primary/40 hover:bg-white/[0.04] md:grid-cols-[72px_1fr]">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/15 font-mono text-sm text-primary">{number}</div>
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-white">{title}</h3>
+                  <p className="mt-2 leading-7 text-zinc-400">{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
