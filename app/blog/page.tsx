@@ -3,6 +3,13 @@ import { route } from '@/lib/routes'
 
 const articles = [
   {
+    slug: 'transparent-ai-engineering',
+    category: 'AI Engineering · Governance',
+    title: 'AI Engineering should not become a black box',
+    excerpt:
+      'AI can dramatically accelerate software delivery, but opaque methodologies may also create hidden technical debt, fragile systems and long-term dependency.',
+  },
+  {
     slug: 'specification-as-the-new-software-contract',
     category: 'Specification · AI Engineering',
     title: 'Why specification could become the new strategic layer of software engineering',
