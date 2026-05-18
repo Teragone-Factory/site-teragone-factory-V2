@@ -17,18 +17,18 @@ const cases = [
     pillar: 'Architecture & Delivery',
     problem: 'Modernisation d’une plateforme critique legacy.',
     intervention:
-      'Audit architecture, cadrage, squads seniors, industrialisation CI/CD, observabilité et amélioration performance.',
+      'Audit architecture et codebase, identification de la dette technique, cadrage de la trajectoire cible, mise en place d’une squad senior, industrialisation CI/CD, observabilité, amélioration performance et sécurisation progressive des mises en production.',
     results:
-      'Plateforme stabilisée, trajectoire de modernisation claire, accélération delivery et réduction de la dette technique.',
+      'Plateforme stabilisée, meilleure visibilité technique, trajectoire de modernisation claire, réduction des risques de production, accélération du delivery et capacité à faire évoluer le système sans rupture majeure.',
   },
   {
     sector: 'Enterprise AI',
     pillar: 'AI Engineering',
     problem: 'Industrialisation d’usages IA dans un SI complexe.',
     intervention:
-      'Architecture AI-ready, RAG, orchestration LLM, gouvernance, sécurité, observabilité et mise en production.',
+      'Architecture AI-ready, structuration des données et connaissances métier, RAG, orchestration LLM, workflows agentiques, gouvernance des usages IA, sécurité, observabilité, évaluation des réponses et intégration progressive dans les processus existants.',
     results:
-      'Capacités IA intégrées durablement aux workflows métiers avec une approche contrôlée et industrialisable.',
+      'Des capacités IA intégrées durablement aux workflows métiers, une adoption plus contrôlée, des usages plus fiables, une réduction des tâches répétitives et une base technique capable de supporter de nouveaux cas d’usage IA à l’échelle.',
   },
   {
     sector: 'Blockchain Infrastructure',
@@ -45,9 +45,9 @@ const cases = [
     pillar: 'Audit & Expertise',
     problem: 'Dette technique, manque de visibilité et ralentissement delivery.',
     intervention:
-      'Audit de code, gouvernance engineering, architecture cible, priorisation roadmap et accompagnement des équipes.',
+      'Audit de code et d’architecture, revue des dépendances, analyse des flux critiques, gouvernance engineering, identification des quick wins, définition d’une architecture cible, priorisation roadmap et accompagnement des équipes dans la reprise de contrôle.',
     results:
-      'Roadmap claire, meilleure maintenabilité, décisions techniques objectivées et capacité delivery renforcée.',
+      'Roadmap claire et arbitrée, meilleure maintenabilité, décisions techniques objectivées, dette priorisée, gouvernance renforcée, baisse de l’incertitude et capacité delivery restaurée sur les chantiers les plus importants.',
   },
 ]
 
