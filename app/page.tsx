@@ -17,26 +17,38 @@ const pillars = [
   {
     title: 'Audit & Expertise',
     description:
-      'Architecture, dette technique, performance, gouvernance et analyse AI-assisted pour reprendre le contrôle sur les systèmes complexes.',
+      'Audits techniques, architecture, dette logicielle et modernisation pragmatique pour reprendre le contrôle sur des systèmes critiques.',
     href: '/expertises/audit',
+    visual: '🧭',
+    proof: 'Architecture & gouvernance',
+    accent: 'from-blue-500/30 to-cyan-400/20',
   },
   {
     title: 'Delivery & Squads Seniors',
     description:
-      'Des équipes seniors capables de délivrer rapidement sur des environnements critiques avec une forte culture engineering.',
+      'Des squads seniors AI-ready capables de concevoir, reprendre et industrialiser des plateformes complexes avec une forte culture engineering.',
     href: '/expertises/delivery',
+    visual: '⚙️',
+    proof: 'Software craftsmanship',
+    accent: 'from-violet-500/30 to-blue-400/20',
   },
   {
     title: 'IA & Systèmes Agentiques',
     description:
-      'Conception de plateformes AI-ready et agent-ready, de la stratégie aux systèmes en production.',
+      'RAG, orchestration LLM, agents autonomes et AI engineering pour construire des systèmes intelligents réellement exploitables.',
     href: '/expertises/ia-agentique',
+    visual: '✦',
+    proof: 'AI-ready systems',
+    accent: 'from-cyan-500/30 to-emerald-400/20',
   },
   {
     title: 'Web3 & Blockchain',
     description:
-      'Architectures distribuées, souveraineté, protocoles décentralisés et engineering blockchain entreprise.',
+      'Protocol engineering, infrastructures distribuées, plateformes Web3 et convergence IA + agents + systèmes décentralisés.',
     href: '/expertises/web3',
+    visual: '◈',
+    proof: 'Distributed systems',
+    accent: 'from-fuchsia-500/30 to-violet-400/20',
   },
 ]
 
@@ -92,17 +104,28 @@ export default function HomePage() {
 
         <ProofBar />
 
-        <section className="mx-auto max-w-7xl px-6 py-28">
-          <SectionHeading
-            eyebrow="Expertises"
-            title="Des expertises conçues pour les environnements complexes."
-            description="Architecture, modernisation, IA, delivery et plateformes distribuées avec une approche engineering orientée production réelle."
-          />
+        <section className="relative mx-auto max-w-7xl px-6 py-28">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_55%)]" />
 
-          <div className="mt-16 grid gap-6 md:grid-cols-2">
-            {pillars.map((pillar) => (
-              <PillarCard key={pillar.title} {...pillar} />
-            ))}
+          <div className="relative">
+            <SectionHeading
+              eyebrow="Expertises"
+              title="Une expertise engineering pensée pour les systèmes critiques."
+              description="Nous accompagnons les organisations qui doivent moderniser, industrialiser et faire évoluer des plateformes complexes avec une approche pragmatique, senior et orientée production réelle."
+            />
+
+            <div className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-500">
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Architecture & modernisation</span>
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">AI engineering & agents</span>
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Delivery production-grade</span>
+              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Distributed systems & Web3</span>
+            </div>
+
+            <div className="mt-16 grid gap-8 md:grid-cols-2">
+              {pillars.map((pillar) => (
+                <PillarCard key={pillar.title} {...pillar} />
+              ))}
+            </div>
           </div>
         </section>
 
