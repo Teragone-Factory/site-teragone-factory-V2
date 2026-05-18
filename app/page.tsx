@@ -13,8 +13,6 @@ import { Card } from '@/components/ui/Card'
 import { PillarCard } from '@/components/ui/PillarCard'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
-const assetPath = process.env.NODE_ENV === 'production' ? '/site-teragone-factory-V2' : ''
-
 const pillars = [
   { title: 'Audit & Expertise', description: 'Audits techniques, architecture, dette logicielle et modernisation pragmatique pour reprendre le contrôle sur des systèmes critiques.', href: '/expertises/audit', visual: '🧭', proof: 'Architecture & gouvernance', accent: 'from-blue-500/30 to-cyan-400/20' },
   { title: 'Delivery & Squads Seniors', description: 'Des squads seniors AI-ready capables de concevoir, reprendre et industrialiser des plateformes complexes avec une forte culture engineering.', href: '/expertises/delivery', visual: '⚙️', proof: 'Software craftsmanship', accent: 'from-violet-500/30 to-blue-400/20' },
@@ -38,7 +36,7 @@ const landingUseCases = [
 
 function UseCaseThumbnail({ type }: { type: string }) {
   if (type === 'mithril') {
-    return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-white/10 bg-[#202326] p-5"><img src={`${assetPath}/mithril.png`} alt="Mithril" className="h-20 w-20 object-contain" /></div>
+    return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-500/20 bg-gradient-to-br from-[#101827] to-[#0B1020] p-5"><div className="text-center"><div className="mx-auto mb-3 h-10 w-10 rounded-xl border border-blue-400/25 bg-blue-400/10" /><p className="font-mono text-xs uppercase tracking-[0.32em] text-blue-300">Mithril Protocol</p></div></div>
   }
   if (type === 'ai') {
     return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-cyan-400/15 bg-gradient-to-br from-[#0D1725] to-[#111827] p-5"><div className="flex items-center gap-4"><div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/25 bg-cyan-400/10 text-lg text-cyan-200">AI</div><div className="h-px w-10 bg-cyan-300/35" /><div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-400/25 bg-blue-400/10 text-lg text-blue-200">API</div></div></div>
