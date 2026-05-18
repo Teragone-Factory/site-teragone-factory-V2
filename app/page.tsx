@@ -13,21 +13,6 @@ import { Card } from '@/components/ui/Card'
 import { PillarCard } from '@/components/ui/PillarCard'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
-const pillars = [
-  { title: 'Audit & Expertise', description: 'Audits techniques, architecture, dette logicielle et modernisation pragmatique pour reprendre le contrôle sur des systèmes critiques.', href: '/expertises/audit', visual: '🧭', proof: 'Architecture & gouvernance', accent: 'from-blue-500/30 to-cyan-400/20' },
-  { title: 'Delivery & Squads Seniors', description: 'Des squads seniors AI-ready capables de concevoir, reprendre et industrialiser des plateformes complexes avec une forte culture engineering.', href: '/expertises/delivery', visual: '⚙️', proof: 'Software craftsmanship', accent: 'from-violet-500/30 to-blue-400/20' },
-  { title: 'IA & Systèmes Agentiques', description: 'RAG, orchestration LLM, agents autonomes et AI engineering pour construire des systèmes intelligents réellement exploitables.', href: '/expertises/ia-agentique', visual: '✦', proof: 'AI-ready systems', accent: 'from-cyan-500/30 to-emerald-400/20' },
-  { title: 'Web3 & Blockchain', description: 'Protocol engineering, infrastructures distribuées, plateformes Web3 et convergence IA + agents + systèmes décentralisés.', href: '/expertises/web3', visual: '◈', proof: 'Distributed systems', accent: 'from-fuchsia-500/30 to-violet-400/20' },
-]
-
-const differentiators = [
-  ['01', 'Senior expertise', 'Des profils expérimentés sur des enjeux critiques, capables de décider vite et juste.'],
-  ['02', 'AI inside', 'L’IA est intégrée dans les pratiques, les architectures et les workflows de delivery.'],
-  ['03', 'Long-term thinking', 'Des choix pensés pour la maintenabilité, la gouvernance et l’évolution des plateformes.'],
-  ['04', 'Production focus', 'Une obsession simple : livrer des systèmes fiables, observables et exploitables en production.'],
-  ['05', 'Craft quality', 'Des standards élevés de qualité logicielle, tests, documentation et transmission.'],
-]
-
 const landingUseCases = [
   { tag: 'Transport & mobilité', title: 'Modernisation et delivery à forte criticité.', text: 'Audit, architecture, squads seniors et mise en production sur des environnements complexes.', visual: 'legacy' },
   { tag: 'Plateforme IA enterprise', title: 'Industrialisation d’usages IA dans un SI complexe.', text: 'RAG, orchestration LLM, gouvernance et intégration durable dans les workflows métiers.', visual: 'ai' },
@@ -87,5 +72,28 @@ function UseCaseThumbnail({ type }: { type: string }) {
 }
 
 export default function HomePage() {
-  return <></>
+  return (
+    <>
+      <NavBar />
+      <main className="overflow-hidden bg-background text-white">
+        <section className="mx-auto max-w-7xl px-6 py-28">
+          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+            <SectionHeading eyebrow="Use Cases" title="Des projets réels. Des systèmes critiques." />
+            <Button href="/use-cases" variant="ghost">Voir tous les cas clients →</Button>
+          </div>
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
+            {landingUseCases.map((item) => (
+              <Card key={item.title}>
+                <UseCaseThumbnail type={item.visual} />
+                <span className="mb-4 inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">{item.tag}</span>
+                <h3 className="mb-4 font-display text-2xl font-semibold">{item.title}</h3>
+                <p className="text-sm leading-7 text-zinc-400">{item.text}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
 }
