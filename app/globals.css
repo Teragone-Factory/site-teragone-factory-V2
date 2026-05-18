@@ -4,15 +4,15 @@
 
 :root {
   color-scheme: dark;
-  --background: #0A0A0F;
-  --surface: #12121A;
-  --card: #1C1C28;
+  --background: #0B0D14;
+  --surface: #111522;
+  --card: #181D2D;
   --primary: #3B82F6;
   --secondary: #8B5CF6;
   --cyan: #06B6D4;
   --text: #FFFFFF;
-  --muted: #A1A1AA;
-  --border: rgba(255,255,255,0.1);
+  --muted: #B6BBC8;
+  --border: rgba(255,255,255,0.14);
 }
 
 html[data-theme='light'] {
@@ -33,9 +33,36 @@ html {
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(59,130,246,0.08), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(139,92,246,0.06), transparent 30%),
+    var(--background);
   color: var(--text);
   transition: background-color 220ms ease, color 220ms ease;
+}
+
+html:not([data-theme='light']) .bg-card,
+html:not([data-theme='light']) .bg-white\/\[0\.03\],
+html:not([data-theme='light']) .bg-white\/\[0\.04\],
+html:not([data-theme='light']) .bg-white\/\[0\.02\] {
+  background-color: rgba(24, 29, 45, 0.92) !important;
+}
+
+html:not([data-theme='light']) .border-white\/5,
+html:not([data-theme='light']) .border-white\/10 {
+  border-color: rgba(255,255,255,0.14) !important;
+}
+
+html:not([data-theme='light']) .text-zinc-400 {
+  color: #B6BBC8 !important;
+}
+
+html:not([data-theme='light']) .text-zinc-500 {
+  color: #8F96A8 !important;
+}
+
+html:not([data-theme='light']) .shadow-primary\/10 {
+  box-shadow: 0 28px 90px rgba(59,130,246,0.16) !important;
 }
 
 html[data-theme='light'] body,
@@ -114,8 +141,8 @@ h1 {
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
