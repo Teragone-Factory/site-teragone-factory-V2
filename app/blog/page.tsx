@@ -3,6 +3,13 @@ import { route } from '@/lib/routes'
 
 const articles = [
   {
+    slug: 'agentic-computing-protocols',
+    category: 'Agentic AI · Protocols',
+    title: 'Towards agentic computing: why protocols will change everything',
+    excerpt:
+      'Protocols, agent orchestration and machine-to-machine communication standards are becoming the invisible infrastructure of the next digital world.',
+  },
+  {
     slug: 'transparent-ai-engineering',
     category: 'AI Engineering · Governance',
     title: 'AI Engineering should not become a black box',
