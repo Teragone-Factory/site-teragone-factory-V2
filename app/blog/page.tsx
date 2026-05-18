@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { route } from '@/lib/routes'
 
 const articles = [
   {
@@ -28,7 +29,7 @@ export default function BlogPage() {
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`/blog/${article.slug}`}
+            href={route(`/blog/${article.slug}`)}
             className="group rounded-[2rem] border border-white/10 bg-card p-10 transition hover:border-primary/40 hover:bg-white/[0.03]"
           >
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan">
