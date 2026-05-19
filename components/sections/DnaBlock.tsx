@@ -18,20 +18,20 @@ const en = [
 
 export function DnaBlock() {
   const pathname = usePathname() || '/'
-  const isEnglish = pathname.startsWith('/en') || pathname.includes('/site-teragone-factory-V2/en')
-  const values = isEnglish ? en : fr
+  const isFrench = pathname.startsWith('/fr') || pathname.includes('/site-teragone-factory-V2/fr')
+  const values = isFrench ? fr : en
 
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-28">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.10),transparent_32%),radial-gradient(circle_at_90%_80%,rgba(6,182,212,0.08),transparent_30%)]" />
       <div className="relative grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <div>
-          <span className="text-sm uppercase tracking-[0.3em] text-primary">{isEnglish ? 'Our DNA' : 'Notre ADN'}</span>
+          <span className="text-sm uppercase tracking-[0.3em] text-primary">{isFrench ? 'Notre ADN' : 'Our DNA'}</span>
           <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">
-            {isEnglish ? 'Engineering culture, pragmatism and technical excellence.' : 'Culture engineering, pragmatisme et excellence technique.'}
+            {isFrench ? 'Culture engineering, pragmatisme et excellence technique.' : 'Engineering culture, pragmatism and technical excellence.'}
           </h2>
           <p className="mt-6 text-lg leading-8 text-zinc-400">
-            {isEnglish ? 'We combine software craftsmanship, AI engineering and knowledge transfer to build useful, robust and truly operable systems.' : 'Nous combinons software craftsmanship, AI engineering et transmission pour construire des systemes utiles, robustes et exploitables par les equipes.'}
+            {isFrench ? 'Nous combinons software craftsmanship, AI engineering et transmission pour construire des systemes utiles, robustes et exploitables par les equipes.' : 'We combine software craftsmanship, AI engineering and knowledge transfer to build useful, robust and truly operable systems.'}
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
