@@ -2,19 +2,34 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { route } from '@/lib/routes'
 
-const links = [
+const frLinks = [
   { href: '/expertises', label: 'Expertises' },
   { href: '/use-cases', label: 'Use Cases' },
   { href: '/notre-adn', label: 'Notre ADN' },
   { href: '/advisory-board', label: 'Advisory Board' },
+  { href: '/blog', label: 'Blog' },
   { href: '/nous-rejoindre', label: 'Rejoindre' },
   { href: '/contact', label: 'Contact' },
 ]
 
+const enLinks = [
+  { href: '/en/expertises', label: 'Expertise' },
+  { href: '/en/use-cases', label: 'Use Cases' },
+  { href: '/en/notre-adn', label: 'Our DNA' },
+  { href: '/en/advisory-board', label: 'Advisory Board' },
+  { href: '/en/blog', label: 'Blog' },
+  { href: '/en/nous-rejoindre', label: 'Careers' },
+  { href: '/en/contact', label: 'Contact' },
+]
+
 export function MobileMenu() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname() || '/'
+  const isEnglish = pathname.startsWith('/en') || pathname.includes('/site-teragone-factory-V2/en')
+  const links = isEnglish ? enLinks : frLinks
 
   return (
     <div className="md:hidden">
