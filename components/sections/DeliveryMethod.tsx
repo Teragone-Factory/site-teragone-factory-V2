@@ -18,8 +18,8 @@ const enSteps = [
 
 export function DeliveryMethod() {
   const pathname = usePathname() || '/'
-  const isEnglish = pathname.startsWith('/en') || pathname.includes('/site-teragone-factory-V2/en')
-  const steps = isEnglish ? enSteps : frSteps
+  const isFrench = pathname.startsWith('/fr') || pathname.includes('/site-teragone-factory-V2/fr')
+  const steps = isFrench ? frSteps : enSteps
 
   return (
     <section className="relative border-y border-white/5 bg-surface">
@@ -27,17 +27,17 @@ export function DeliveryMethod() {
       <div className="relative mx-auto max-w-7xl px-6 py-28">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <span className="text-sm uppercase tracking-[0.3em] text-primary">{isEnglish ? 'Method' : 'Méthode'}</span>
+            <span className="text-sm uppercase tracking-[0.3em] text-primary">{isFrench ? 'Méthode' : 'Method'}</span>
             <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">
-              {isEnglish ? 'From audit to production, with a clear delivery path.' : 'De l’audit à la production, avec une trajectoire claire.'}
+              {isFrench ? 'De l’audit à la production, avec une trajectoire claire.' : 'From audit to production, with a clear delivery path.'}
             </h2>
             <p className="mt-6 text-lg leading-8 text-zinc-400">
-              {isEnglish ? 'A clear, senior-led approach: understand fast, decide well, deliver cleanly and transfer knowledge over time.' : 'Une approche simple à lire, senior à l’exécution : comprendre vite, décider juste, livrer proprement et transmettre durablement.'}
+              {isFrench ? 'Une approche simple à lire, senior à l’exécution : comprendre vite, décider juste, livrer proprement et transmettre durablement.' : 'A clear, senior-led approach: understand fast, decide well, deliver cleanly and transfer knowledge over time.'}
             </p>
             <div className="mt-8 rounded-3xl border border-white/10 bg-background/70 p-6 backdrop-blur-xl">
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan">{isEnglish ? 'Expected outcome' : 'Résultat attendu'}</p>
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan">{isFrench ? 'Résultat attendu' : 'Expected outcome'}</p>
               <p className="mt-3 text-zinc-300">
-                {isEnglish ? 'Less ambiguity, less software debt, more useful velocity and a platform that can truly be operated in production.' : 'Moins d’ambiguïté, moins de dette, plus de vitesse utile et une plateforme réellement pilotable en production.'}
+                {isFrench ? 'Moins d’ambiguïté, moins de dette, plus de vitesse utile et une plateforme réellement pilotable en production.' : 'Less ambiguity, less software debt, more useful velocity and a platform that can truly be operated in production.'}
               </p>
             </div>
           </div>
