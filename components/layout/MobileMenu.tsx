@@ -6,30 +6,30 @@ import { usePathname } from 'next/navigation'
 import { route } from '@/lib/routes'
 
 const frLinks = [
-  { href: '/expertises', label: 'Expertises' },
-  { href: '/use-cases', label: 'Use Cases' },
-  { href: '/notre-adn', label: 'Notre ADN' },
-  { href: '/advisory-board', label: 'Advisory Board' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/nous-rejoindre', label: 'Rejoindre' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/fr/expertises', label: 'Expertises' },
+  { href: '/fr/use-cases', label: 'Use Cases' },
+  { href: '/fr/notre-adn', label: 'Notre ADN' },
+  { href: '/fr/advisory-board', label: 'Advisory Board' },
+  { href: '/fr/blog', label: 'Blog' },
+  { href: '/fr/nous-rejoindre', label: 'Rejoindre' },
+  { href: '/fr/contact', label: 'Contact' },
 ]
 
 const enLinks = [
-  { href: '/en/expertises', label: 'Expertise' },
-  { href: '/en/use-cases', label: 'Use Cases' },
-  { href: '/en/notre-adn', label: 'Our DNA' },
-  { href: '/en/advisory-board', label: 'Advisory Board' },
-  { href: '/en/blog', label: 'Blog' },
-  { href: '/en/nous-rejoindre', label: 'Careers' },
-  { href: '/en/contact', label: 'Contact' },
+  { href: '/expertises', label: 'Expertise' },
+  { href: '/use-cases', label: 'Use Cases' },
+  { href: '/notre-adn', label: 'Our DNA' },
+  { href: '/advisory-board', label: 'Advisory Board' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/nous-rejoindre', label: 'Careers' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname() || '/'
-  const isEnglish = pathname.startsWith('/en') || pathname.includes('/site-teragone-factory-V2/en')
-  const links = isEnglish ? enLinks : frLinks
+  const isFrench = pathname.startsWith('/fr') || pathname.includes('/site-teragone-factory-V2/fr')
+  const links = isFrench ? frLinks : enLinks
 
   return (
     <div className="md:hidden">
