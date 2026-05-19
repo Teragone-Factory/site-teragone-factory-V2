@@ -17,23 +17,23 @@ const socialLinks = [
 
 export function Footer() {
   const pathname = usePathname() || '/'
-  const isEnglish = pathname.startsWith('/en') || pathname.includes('/site-teragone-factory-V2/en')
+  const isFrench = pathname.startsWith('/fr') || pathname.includes('/site-teragone-factory-V2/fr')
 
-  const navigation = isEnglish
+  const navigation = isFrench
     ? [
-        { href: '/en/expertises', label: 'Expertise' },
-        { href: '/en/use-cases', label: 'Use Cases' },
-        { href: '/en/notre-adn', label: 'Our DNA' },
-        { href: '/en/blog', label: 'Blog' },
-        { href: '/en/nous-rejoindre', label: 'Careers' },
-        { href: '/en/contact', label: 'Contact' },
+        { href: '/fr/expertises', label: 'Expertises' },
+        { href: '/fr/use-cases', label: 'Use Cases' },
+        { href: '/fr/notre-adn', label: 'Notre ADN' },
+        { href: '/fr/blog', label: 'Blog' },
+        { href: '/fr/nous-rejoindre', label: 'Rejoindre' },
+        { href: '/fr/contact', label: 'Contact' },
       ]
     : [
-        { href: '/expertises', label: 'Expertises' },
+        { href: '/expertises', label: 'Expertise' },
         { href: '/use-cases', label: 'Use Cases' },
-        { href: '/notre-adn', label: 'Notre ADN' },
+        { href: '/notre-adn', label: 'Our DNA' },
         { href: '/blog', label: 'Blog' },
-        { href: '/nous-rejoindre', label: 'Rejoindre' },
+        { href: '/nous-rejoindre', label: 'Careers' },
         { href: '/contact', label: 'Contact' },
       ]
 
@@ -46,9 +46,9 @@ export function Footer() {
           </h3>
 
           <p className="max-w-2xl text-sm leading-8 text-zinc-500">
-            {isEnglish
-              ? 'Digital & AI Delivery Factory focused on software architecture, AI Engineering, Web3, distributed systems and senior delivery for critical environments.'
-              : 'Digital & AI Delivery Factory du groupe Teragone Solutions. Architecture logicielle, AI Engineering, Web3, systèmes distribués et delivery senior pour environnements critiques.'}
+            {isFrench
+              ? 'Digital & AI Delivery Factory du groupe Teragone Solutions. Architecture logicielle, AI Engineering, Web3, systèmes distribués et delivery senior pour environnements critiques.'
+              : 'Digital & AI Delivery Factory focused on software architecture, AI Engineering, Web3, distributed systems and senior delivery for critical environments.'}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -64,9 +64,7 @@ export function Footer() {
         </div>
 
         <div className="grid content-start gap-3 text-sm text-zinc-400">
-          <p className="mb-2 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">
-            {isEnglish ? 'Navigation' : 'Navigation'}
-          </p>
+          <p className="mb-2 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">Navigation</p>
 
           {navigation.map((item) => (
             <Link key={item.href} href={route(item.href)} className="transition hover:text-white">
@@ -96,15 +94,15 @@ export function Footer() {
           </div>
 
           <p className="mt-6 text-xs leading-6 text-zinc-600">
-            {isEnglish
-              ? 'Follow our publications on AI Engineering, Web3, distributed systems and software craftsmanship.'
-              : 'Suivez nos publications sur l’AI Engineering, le Web3, les systèmes distribués et le software craftsmanship.'}
+            {isFrench
+              ? 'Suivez nos publications sur l’AI Engineering, le Web3, les systèmes distribués et le software craftsmanship.'
+              : 'Follow our publications on AI Engineering, Web3, distributed systems and software craftsmanship.'}
           </p>
         </div>
       </div>
 
       <div className="border-t border-white/5 px-6 py-6 text-center text-xs uppercase tracking-[0.25em] text-zinc-600">
-        © 2026 Teragone Factory — {isEnglish ? 'Sustainable engineering & AI-ready systems' : 'Engineering durable & systèmes AI-ready'}
+        © 2026 Teragone Factory — {isFrench ? 'Engineering durable & systèmes AI-ready' : 'Sustainable engineering & AI-ready systems'}
       </div>
     </footer>
   )
