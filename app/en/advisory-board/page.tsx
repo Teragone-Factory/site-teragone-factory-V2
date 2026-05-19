@@ -1,6 +1,6 @@
 import { Footer } from '@/components/layout/Footer'
 import { NavBar } from '@/components/layout/NavBar'
-import { FinalCTA } from '@/components/sections/FinalCTA'
+import { FinalCTAEn } from '@/components/sections/en/FinalCTAEn'
 
 const teragoneBoard = ['A', 'B', 'C', 'D', 'E']
 const web3Board = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
@@ -96,7 +96,7 @@ export default function AdvisoryBoardPage() {
         </section>
       </main>
 
-      <FinalCTA />
+      <FinalCTAEn />
       <Footer />
     </>
   )
