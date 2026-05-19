@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 type PillarCardProps = {
   title: string
@@ -10,6 +13,9 @@ type PillarCardProps = {
 }
 
 export function PillarCard({ title, description, href, accent = 'from-primary/30 to-cyan/20', visual = '✦', proof }: PillarCardProps) {
+  const pathname = usePathname() || '/'
+  const isFrench = pathname.startsWith('/fr') || pathname.includes('/site-teragone-factory-V2/fr')
+
   return (
     <Link
       href={href}
@@ -33,7 +39,7 @@ export function PillarCard({ title, description, href, accent = 'from-primary/30
         </p>
 
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:text-cyan">
-          Découvrir l’approche <span className="transition group-hover:translate-x-1">→</span>
+          {isFrench ? 'Découvrir l’approche' : 'Explore the approach'} <span className="transition group-hover:translate-x-1">→</span>
         </span>
       </div>
     </Link>
