@@ -16,8 +16,8 @@ const enItems = [
 
 export function CredibilitySection() {
   const pathname = usePathname() || '/'
-  const isEnglish = pathname.startsWith('/en') || pathname.includes('/site-teragone-factory-V2/en')
-  const items = isEnglish ? enItems : frItems
+  const isFrench = pathname.startsWith('/fr') || pathname.includes('/site-teragone-factory-V2/fr')
+  const items = isFrench ? frItems : enItems
 
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-28">
@@ -27,21 +27,21 @@ export function CredibilitySection() {
         <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-4xl">
             <span className="text-sm uppercase tracking-[0.3em] text-primary">
-              {isEnglish ? 'Why companies work with us' : 'Pourquoi les entreprises travaillent avec nous'}
+              {isFrench ? 'Pourquoi les entreprises travaillent avec nous' : 'Why companies work with us'}
             </span>
 
             <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">
-              {isEnglish ? 'An engineering culture focused on real-world impact.' : 'Une culture engineering orientée impact réel.'}
+              {isFrench ? 'Une culture engineering orientée impact réel.' : 'An engineering culture focused on real-world impact.'}
             </h2>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-              {isEnglish ? 'We help technical teams regain control over complex systems with a clearer, more senior and more sustainable approach.' : 'Nous aidons les équipes techniques à reprendre le contrôle sur des systèmes complexes avec une approche plus claire, plus senior et plus durable.'}
+              {isFrench ? 'Nous aidons les équipes techniques à reprendre le contrôle sur des systèmes complexes avec une approche plus claire, plus senior et plus durable.' : 'We help technical teams regain control over complex systems with a clearer, more senior and more sustainable approach.'}
             </p>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-card/70 px-6 py-5 backdrop-blur-xl">
-            <p className="text-sm uppercase tracking-[0.24em] text-cyan">{isEnglish ? 'Our approach' : 'Notre approche'}</p>
-            <p className="mt-2 text-zinc-300">{isEnglish ? 'Less unnecessary complexity. More visibility, quality and useful velocity.' : 'Moins de complexité inutile. Plus de visibilité, de qualité et de vitesse utile.'}</p>
+            <p className="text-sm uppercase tracking-[0.24em] text-cyan">{isFrench ? 'Notre approche' : 'Our approach'}</p>
+            <p className="mt-2 text-zinc-300">{isFrench ? 'Moins de complexité inutile. Plus de visibilité, de qualité et de vitesse utile.' : 'Less unnecessary complexity. More visibility, quality and useful velocity.'}</p>
           </div>
         </div>
 
