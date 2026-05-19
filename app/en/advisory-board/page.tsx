@@ -20,12 +20,12 @@ const teragoneBoard = [
     focus: ['Strategy', 'Enterprise growth', 'Client development'],
   },
   {
-    name: 'Benoît Foucque',
-    role: 'CTO Advisor — Architecture & Distributed Systems',
-    image: 'BF',
+    name: 'Antoine Ternisien',
+    role: 'Strategic Advisor — Data, Digital & Financial Services',
+    image: 'AT',
     linkedin: '#',
-    bio: 'Benoît supports Teragone Factory on architecture, technical governance and complex software delivery. His role is to help shape robust, scalable and maintainable platforms while keeping a strong focus on production readiness and engineering quality.',
-    focus: ['Architecture', 'Distributed systems', 'Production readiness'],
+    bio: 'Antoine brings strong consulting and business development experience in banking, insurance, data and digital transformation. He helps connect Teragone Factory’s engineering capabilities with enterprise priorities, sector-specific constraints and high-value transformation opportunities.',
+    focus: ['Data', 'Digital transformation', 'Financial services'],
   },
   {
     name: 'Philippe Arnulf',
