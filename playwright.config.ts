@@ -5,12 +5,12 @@ export default defineConfig({
   fullyParallel: true,
   timeout: 30000,
   use: {
-    baseURL: 'http://localhost:3000/site-teragone-factory-V2',
+    baseURL: 'http://127.0.0.1:3000/site-teragone-factory-V2',
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'npx serve out -l 3000',
-    url: 'http://localhost:3000/site-teragone-factory-V2/',
+    command: 'npx http-server out -p 3000 -a 127.0.0.1',
+    url: 'http://127.0.0.1:3000/site-teragone-factory-V2/',
     reuseExistingServer: !process.env.CI,
     timeout: 120000,
   },
