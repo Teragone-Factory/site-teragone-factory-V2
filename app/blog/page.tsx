@@ -37,7 +37,7 @@ export default function BlogPage() {
     <main className="mx-auto max-w-6xl px-6 py-24">
       <Link href={route('/')} className="mb-12 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-zinc-300 transition hover:border-primary/40 hover:bg-white/[0.05] hover:text-white">
         <span className="text-lg">←</span>
-        Retour au site
+        Back to website
       </Link>
 
       <div className="max-w-3xl">
