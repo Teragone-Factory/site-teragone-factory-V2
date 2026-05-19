@@ -8,38 +8,42 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Use Cases',
   description: 'Teragone Factory use cases: legacy modernization, AI platforms, Web3, distributed systems and senior delivery.',
-  alternates: { canonical: '/en/use-cases/', languages: { fr: '/use-cases/', en: '/en/use-cases/' } },
+  alternates: { canonical: '/use-cases/', languages: { fr: '/fr/use-cases/', en: '/use-cases/' } },
 }
 
 const cases = [
   {
     sector: 'Mobility & Transportation',
     pillar: 'Architecture & Delivery',
-    problem: 'Critical legacy platform modernization.',
-    intervention: 'Architecture and codebase audit, software debt assessment, target trajectory definition, senior squad setup, CI/CD industrialization, observability, performance improvement and progressive production hardening.',
-    results: 'A more stable platform, stronger technical visibility, a clear modernization path, reduced production risk, faster delivery and the ability to evolve the system without major disruption.',
+    problem: 'Modernizing a critical legacy platform without stopping the business.',
+    story: 'A large mobility platform had reached a point where every evolution was becoming slower, riskier and harder to operate. The system was still delivering business value, but technical debt, limited observability and fragile delivery flows were creating growing pressure on both IT and business teams.',
+    intervention: 'We started with an architecture and codebase audit, clarified the main risks, mapped critical flows and identified the modernization path that would create the highest impact without triggering a risky big-bang rewrite. We then supported the setup of a senior squad, CI/CD industrialization, observability improvements, performance work and progressive production hardening.',
+    benefits: 'The platform became easier to understand, safer to operate and more predictable to evolve. Teams gained visibility, delivery risk was reduced, modernization became actionable and the organization recovered the ability to move forward without destabilizing a critical system.',
   },
   {
     sector: 'Enterprise AI',
     pillar: 'AI Engineering',
-    problem: 'Industrializing AI use cases in a complex information system.',
-    intervention: 'AI-ready architecture, enterprise data and knowledge structuring, RAG, LLM orchestration, agentic workflows, AI governance, security, observability, answer evaluation and progressive integration into existing processes.',
-    results: 'AI capabilities durably embedded into business workflows, more controlled adoption, more reliable use cases, reduced repetitive work and a technical foundation able to support new AI initiatives at scale.',
+    problem: 'Turning promising AI ideas into reliable enterprise workflows.',
+    story: 'The organization had identified valuable AI use cases, but the challenge was not the demo. The real issue was how to connect AI to existing data, business processes, governance rules and operational constraints without creating a fragile side project.',
+    intervention: 'We designed an AI-ready architecture, structured enterprise knowledge sources, introduced RAG and LLM orchestration, defined evaluation mechanisms, addressed security and observability, and progressively integrated AI capabilities into real business workflows.',
+    benefits: 'AI moved from experimentation to controlled adoption. Teams gained reusable technical foundations, more reliable answers, clearer governance and the ability to scale new AI initiatives without rebuilding everything from scratch each time.',
   },
   {
     sector: 'Blockchain Infrastructure',
     pillar: 'Mithril Protocol',
     thumbnail: '/mithril-logo.png',
-    problem: 'Mithril: lightweight certification and fast blockchain synchronization.',
-    intervention: 'Design and development of a distributed certification protocol producing verifiable snapshots, reducing synchronization times and improving reliable access to network state without relying on heavy infrastructure.',
-    results: 'Drastically reduced node bootstrap time, stronger network resilience, lightweight validation, reliable distribution of certified snapshots and a better developer and operator experience for large-scale blockchain infrastructure.',
+    problem: 'Making blockchain synchronization lighter, faster and more reliable.',
+    story: 'In large distributed networks, bootstrapping infrastructure can become slow, costly and operationally heavy. Nodes and services need trusted access to network state, but relying only on heavy synchronization processes limits scalability and resilience.',
+    intervention: 'We contributed to the design and development of a distributed certification protocol producing verifiable snapshots. The goal was to reduce synchronization time, enable lightweight validation and improve access to certified network state without relying on heavy infrastructure assumptions.',
+    benefits: 'Operators and developers benefit from faster bootstrap, lighter validation, stronger resilience and a better infrastructure experience. The network gains a more scalable way to distribute certified snapshots and support large-scale blockchain operations.',
   },
   {
     sector: 'Software Platform',
     pillar: 'Audit & Expertise',
-    problem: 'Technical debt, lack of visibility and slowing delivery.',
-    intervention: 'Code and architecture audit, dependency review, critical-flow analysis, engineering governance, quick-win identification, target architecture definition, roadmap prioritization and support for teams regaining control.',
-    results: 'A clear and prioritized roadmap, improved maintainability, more objective technical decisions, prioritized debt, stronger governance, lower uncertainty and restored delivery capacity on the most important initiatives.',
+    problem: 'Regaining control over technical debt and delivery slowdown.',
+    story: 'A software platform had become difficult to evolve. Teams were facing unclear dependencies, limited visibility on critical flows and a growing gap between business priorities and technical execution capacity.',
+    intervention: 'We conducted a code and architecture audit, reviewed dependencies, analyzed critical flows, identified quick wins, clarified governance issues and built a target roadmap to help teams prioritize what mattered most.',
+    benefits: 'The organization gained a clear, prioritized and actionable view of its platform. Decisions became more objective, technical debt was no longer abstract, governance improved and delivery capacity was restored on the initiatives with the highest business impact.',
   },
 ]
 
