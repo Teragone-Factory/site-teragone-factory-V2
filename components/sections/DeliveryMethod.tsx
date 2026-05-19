@@ -1,23 +1,44 @@
-const steps = [
+'use client'
+
+import { usePathname } from 'next/navigation'
+
+const frSteps = [
   ['01', 'Diagnostiquer', 'Architecture, code, dette, risques et opportunités business.'],
   ['02', 'Concevoir', 'Trajectoire cible, priorités, architecture AI-ready et gouvernance.'],
   ['03', 'Délivrer', 'Squad senior, AI engineering, CI/CD, observabilité et mise en production.'],
   ['04', 'Transmettre', 'Documentation, standards, pratiques et montée en compétence des équipes.'],
 ]
 
+const enSteps = [
+  ['01', 'Diagnose', 'Architecture, codebase, software debt, risks and business opportunities.'],
+  ['02', 'Design', 'Target trajectory, priorities, AI-ready architecture and governance.'],
+  ['03', 'Deliver', 'Senior squad, AI engineering, CI/CD, observability and production rollout.'],
+  ['04', 'Transfer', 'Documentation, standards, practices and team enablement.'],
+]
+
 export function DeliveryMethod() {
+  const pathname = usePathname() || '/'
+  const isEnglish = pathname.startsWith('/en') || pathname.includes('/site-teragone-factory-V2/en')
+  const steps = isEnglish ? enSteps : frSteps
+
   return (
     <section className="relative border-y border-white/5 bg-surface">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.10),transparent_35%),radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.10),transparent_35%)]" />
       <div className="relative mx-auto max-w-7xl px-6 py-28">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <span className="text-sm uppercase tracking-[0.3em] text-primary">Méthode</span>
-            <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">De l’audit à la production, avec une trajectoire claire.</h2>
-            <p className="mt-6 text-lg leading-8 text-zinc-400">Une approche simple à lire, senior à l’exécution : comprendre vite, décider juste, livrer proprement et transmettre durablement.</p>
+            <span className="text-sm uppercase tracking-[0.3em] text-primary">{isEnglish ? 'Method' : 'Méthode'}</span>
+            <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">
+              {isEnglish ? 'From audit to production, with a clear delivery path.' : 'De l’audit à la production, avec une trajectoire claire.'}
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-zinc-400">
+              {isEnglish ? 'A clear, senior-led approach: understand fast, decide well, deliver cleanly and transfer knowledge over time.' : 'Une approche simple à lire, senior à l’exécution : comprendre vite, décider juste, livrer proprement et transmettre durablement.'}
+            </p>
             <div className="mt-8 rounded-3xl border border-white/10 bg-background/70 p-6 backdrop-blur-xl">
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan">Résultat attendu</p>
-              <p className="mt-3 text-zinc-300">Moins d’ambiguïté, moins de dette, plus de vitesse utile et une plateforme réellement pilotable en production.</p>
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan">{isEnglish ? 'Expected outcome' : 'Résultat attendu'}</p>
+              <p className="mt-3 text-zinc-300">
+                {isEnglish ? 'Less ambiguity, less software debt, more useful velocity and a platform that can truly be operated in production.' : 'Moins d’ambiguïté, moins de dette, plus de vitesse utile et une plateforme réellement pilotable en production.'}
+              </p>
             </div>
           </div>
           <div className="grid gap-4">
