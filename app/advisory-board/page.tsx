@@ -11,13 +11,7 @@ const teragoneBoard = [
   { name: 'Eliott Boy', role: 'Strategic Advisor — IT Infrastructure & Cybersecurity', image: 'EB', photo: '/site-teragone-factory-V2/eb.jpg', linkedin: 'https://www.linkedin.com/in/eliott-boy-0a6914115/', bio: 'Eliott contributes expertise across infrastructure, public sector environments and cybersecurity challenges. His perspective strengthens Teragone Factory’s approach to secure, resilient and business-aware technology platforms.', focus: ['Infrastructure', 'Cybersecurity', 'Public sector'] },
 ]
 
-const web3Board = [
-  { name: 'Web3 Advisor', role: 'Protocol & Ecosystem Strategy', image: 'W3', linkedin: '#', bio: 'Advisor profile to be completed with Web3 protocol, governance, ecosystem and funding expertise.', focus: ['Protocol strategy', 'Governance', 'Ecosystem'] },
-  { name: 'Distributed Systems Advisor', role: 'Blockchain Infrastructure', image: 'DS', linkedin: '#', bio: 'Advisor profile to be completed with distributed systems, blockchain infrastructure and operational scalability expertise.', focus: ['Infrastructure', 'Scalability', 'Verification'] },
-  { name: 'AI x Web3 Advisor', role: 'Agentic Systems & Decentralized Infrastructure', image: 'AI', linkedin: '#', bio: 'Advisor profile to be completed with expertise at the convergence of AI agents, decentralized systems and trusted execution.', focus: ['AI agents', 'Web3', 'Trust layers'] },
-]
-
-type Advisor = (typeof teragoneBoard)[number] | (typeof web3Board)[number]
+type Advisor = (typeof teragoneBoard)[number]
 
 function AdvisoryCard({ member }: { member: Advisor }) {
   const photo = 'photo' in member ? member.photo : undefined
@@ -44,7 +38,6 @@ export default function AdvisoryBoardPage() {
       <main className="mx-auto max-w-7xl px-6 py-24 text-white">
         <section className="max-w-4xl"><span className="text-sm uppercase tracking-[0.3em] text-primary">Advisory Board</span><h1 className="mt-5 font-display text-6xl font-bold tracking-tight">Advisory Boards & Strategic Advisors.</h1><p className="mt-6 text-lg leading-8 text-zinc-400">A network of entrepreneurs, technology leaders and senior operators supporting Teragone Factory on strategy, engineering excellence, AI, critical platforms and Web3 challenges.</p></section>
         <section className="mt-24"><div className="flex items-end justify-between gap-6"><div><span className="text-sm uppercase tracking-[0.3em] text-primary">Teragone Factory</span><h2 className="mt-4 font-display text-4xl font-semibold">Teragone Factory Strategic Advisors</h2></div><div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">6 partner profiles</div></div><div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">{teragoneBoard.map((member) => <AdvisoryCard key={member.name} member={member} />)}</div></section>
-        <section className="mt-28"><div className="flex items-end justify-between gap-6"><div><span className="text-sm uppercase tracking-[0.3em] text-primary">Web3 Ecosystem</span><h2 className="mt-4 font-display text-4xl font-semibold">Web3 Advisory Board</h2></div><div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">Profiles in progress</div></div><div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">{web3Board.map((member) => <AdvisoryCard key={member.name} member={member} />)}</div></section>
       </main>
       <FinalCTAEn />
       <Footer />
