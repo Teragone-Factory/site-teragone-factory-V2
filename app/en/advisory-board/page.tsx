@@ -3,55 +3,12 @@ import { NavBar } from '@/components/layout/NavBar'
 import { FinalCTAEn } from '@/components/sections/en/FinalCTAEn'
 
 const teragoneBoard = [
-  {
-    name: 'Séverin Pellegrini',
-    role: 'Co-founder & Managing Director — Tech, AI & Innovation',
-    image: 'SP',
-    photo: '/sp.jpg',
-    linkedin: 'https://www.linkedin.com/in/severinpellegrini/',
-    bio: 'Séverin leads Teragone Factory with a focus on technology strategy, AI engineering, innovation and senior delivery. He supports organizations that need to modernize complex systems, industrialize AI initiatives and connect business value with strong engineering execution.',
-    focus: ['AI Engineering', 'Innovation', 'Critical platforms'],
-  },
-  {
-    name: 'Julien Leroy',
-    role: 'Co-founder & President — Strategy, Growth & Enterprise Development',
-    image: 'JL',
-    linkedin: 'https://www.linkedin.com/in/julien-leroy-bb246315/',
-    bio: 'Julien brings an entrepreneurial and business development perspective to Teragone Factory. He contributes to the company strategy, client positioning and growth trajectory, helping align engineering capabilities with enterprise transformation priorities.',
-    focus: ['Strategy', 'Enterprise growth', 'Client development'],
-  },
-  {
-    name: 'Benoit Foucque',
-    role: 'CTO — Teragone Factory',
-    image: 'BF',
-    linkedin: '#',
-    bio: 'Benoit is Teragone Factory’s CTO. He brings deep engineering leadership across software architecture, distributed systems and production-grade delivery. His role is to strengthen technical direction, guide architecture choices and ensure that the company’s senior squads deliver robust, maintainable and scalable platforms for complex environments.',
-    focus: ['CTO', 'Architecture', 'Distributed systems'],
-  },
-  {
-    name: 'Antoine Ternisien',
-    role: 'Strategic Advisor — Data, Digital & Financial Services',
-    image: 'AT',
-    linkedin: '#',
-    bio: 'Antoine brings strong consulting and business development experience in banking, insurance, data and digital transformation. He helps connect Teragone Factory’s engineering capabilities with enterprise priorities, sector-specific constraints and high-value transformation opportunities.',
-    focus: ['Data', 'Digital transformation', 'Financial services'],
-  },
-  {
-    name: 'Philippe Arnulf',
-    role: 'Strategic Advisor — Software Operations & Exploitability',
-    image: 'PA',
-    linkedin: '#',
-    bio: 'Philippe brings a strong operational background in software platforms, infrastructure and exploitability. He helps reinforce Teragone Factory’s ability to design systems that are not only well built, but also observable, supportable and durable in production.',
-    focus: ['Operations', 'Exploitability', 'Software platforms'],
-  },
-  {
-    name: 'Eliott Boy',
-    role: 'Strategic Advisor — IT Infrastructure & Cybersecurity',
-    image: 'EB',
-    linkedin: '#',
-    bio: 'Eliott contributes expertise across infrastructure, public sector environments and cybersecurity challenges. His perspective strengthens Teragone Factory’s approach to secure, resilient and business-aware technology platforms.',
-    focus: ['Infrastructure', 'Cybersecurity', 'Public sector'],
-  },
+  { name: 'Séverin Pellegrini', role: 'Co-founder & Managing Director — Tech, AI & Innovation', image: 'SP', photo: '/sp.jpg', linkedin: 'https://www.linkedin.com/in/severinpellegrini/', bio: 'Séverin leads Teragone Factory with a focus on technology strategy, AI engineering, innovation and senior delivery. He supports organizations that need to modernize complex systems, industrialize AI initiatives and connect business value with strong engineering execution.', focus: ['AI Engineering', 'Innovation', 'Critical platforms'] },
+  { name: 'Julien Leroy', role: 'Co-founder & President — Strategy, Growth & Enterprise Development', image: 'JL', linkedin: 'https://www.linkedin.com/in/julien-leroy-bb246315/', bio: 'Julien brings an entrepreneurial and business development perspective to Teragone Factory. He contributes to the company strategy, client positioning and growth trajectory, helping align engineering capabilities with enterprise transformation priorities.', focus: ['Strategy', 'Enterprise growth', 'Client development'] },
+  { name: 'Benoit Foucque', role: 'CTO — Teragone Factory', image: 'BF', linkedin: '#', bio: 'Benoit is Teragone Factory’s CTO. He brings deep engineering leadership across software architecture, distributed systems and production-grade delivery. His role is to strengthen technical direction, guide architecture choices and ensure that the company’s senior squads deliver robust, maintainable and scalable platforms for complex environments.', focus: ['CTO', 'Architecture', 'Distributed systems'] },
+  { name: 'Antoine Ternisien', role: 'Strategic Advisor — Data, Digital & Financial Services', image: 'AT', linkedin: '#', bio: 'Antoine brings strong consulting and business development experience in banking, insurance, data and digital transformation. He helps connect Teragone Factory’s engineering capabilities with enterprise priorities, sector-specific constraints and high-value transformation opportunities.', focus: ['Data', 'Digital transformation', 'Financial services'] },
+  { name: 'Philippe Arnulf', role: 'Strategic Advisor — Software Operations & Exploitability', image: 'PA', linkedin: '#', bio: 'Philippe brings a strong operational background in software platforms, infrastructure and exploitability. He helps reinforce Teragone Factory’s ability to design systems that are not only well built, but also observable, supportable and durable in production.', focus: ['Operations', 'Exploitability', 'Software platforms'] },
+  { name: 'Eliott Boy', role: 'Strategic Advisor — IT Infrastructure & Cybersecurity', image: 'EB', linkedin: '#', bio: 'Eliott contributes expertise across infrastructure, public sector environments and cybersecurity challenges. His perspective strengthens Teragone Factory’s approach to secure, resilient and business-aware technology platforms.', focus: ['Infrastructure', 'Cybersecurity', 'Public sector'] },
 ]
 
 const web3Board = [
@@ -60,41 +17,27 @@ const web3Board = [
   { name: 'AI x Web3 Advisor', role: 'Agentic Systems & Decentralized Infrastructure', image: 'AI', linkedin: '#', bio: 'Advisor profile to be completed with expertise at the convergence of AI agents, decentralized systems and trusted execution.', focus: ['AI agents', 'Web3', 'Trust layers'] },
 ]
 
-type TeragoneAdvisor = (typeof teragoneBoard)[number]
-type Web3Advisor = (typeof web3Board)[number]
-type Advisor = TeragoneAdvisor | Web3Advisor
+type Advisor = (typeof teragoneBoard)[number] | (typeof web3Board)[number]
 
 function AdvisoryCard({ member }: { member: Advisor }) {
-  const hasPhoto = 'photo' in member && Boolean(member.photo)
-
+  const photo = 'photo' in member ? member.photo : undefined
   return (
     <article className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.05]">
       <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition duration-500 group-hover:scale-125" />
       <div className="relative flex h-full flex-col">
         <div className="flex items-start gap-5">
-          {hasPhoto ? (
+          {photo ? (
             <div className="h-28 w-28 shrink-0 overflow-hidden rounded-[1.75rem] border border-primary/25 bg-white/[0.04] p-1 shadow-2xl shadow-primary/10">
-              <img src={(member as TeragoneAdvisor).photo} alt={member.name} className="h-full w-full rounded-[1.45rem] object-cover object-center" />
+              <img src={photo} alt={member.name} className="block h-full w-full rounded-[1.45rem] object-cover object-center" />
             </div>
           ) : (
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">
-              {member.image}
-            </div>
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">{member.image}</div>
           )}
-          <div className="min-w-0 pt-1">
-            <h3 className="font-display text-2xl font-semibold text-white">{member.name}</h3>
-            <p className="mt-2 text-sm leading-6 text-zinc-400">{member.role}</p>
-          </div>
+          <div className="min-w-0 pt-1"><h3 className="font-display text-2xl font-semibold text-white">{member.name}</h3><p className="mt-2 text-sm leading-6 text-zinc-400">{member.role}</p></div>
         </div>
         <p className="mt-6 flex-1 text-sm leading-7 text-zinc-400">{member.bio}</p>
-        <div className="mt-6 flex flex-wrap gap-2">
-          {member.focus.map((item) => (
-            <span key={item} className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-zinc-500">{item}</span>
-          ))}
-        </div>
-        <a href={member.linkedin} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-cyan">
-          LinkedIn profile <span>→</span>
-        </a>
+        <div className="mt-6 flex flex-wrap gap-2">{member.focus.map((item) => <span key={item} className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-zinc-500">{item}</span>)}</div>
+        <a href={member.linkedin} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-cyan">LinkedIn profile <span>→</span></a>
       </div>
     </article>
   )
@@ -105,37 +48,9 @@ export default function AdvisoryBoardPage() {
     <>
       <NavBar />
       <main className="mx-auto max-w-7xl px-6 py-24 text-white">
-        <section className="max-w-4xl">
-          <span className="text-sm uppercase tracking-[0.3em] text-primary">Advisory Board</span>
-          <h1 className="mt-5 font-display text-6xl font-bold tracking-tight">Advisory Boards & Strategic Advisors.</h1>
-          <p className="mt-6 text-lg leading-8 text-zinc-400">A network of entrepreneurs, technology leaders and senior operators supporting Teragone Factory on strategy, engineering excellence, AI, critical platforms and Web3 challenges.</p>
-        </section>
-
-        <section className="mt-24">
-          <div className="flex items-end justify-between gap-6">
-            <div>
-              <span className="text-sm uppercase tracking-[0.3em] text-primary">Teragone Factory</span>
-              <h2 className="mt-4 font-display text-4xl font-semibold">Teragone Factory Strategic Advisors</h2>
-            </div>
-            <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">6 partner profiles</div>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {teragoneBoard.map((member) => <AdvisoryCard key={member.name} member={member} />)}
-          </div>
-        </section>
-
-        <section className="mt-28">
-          <div className="flex items-end justify-between gap-6">
-            <div>
-              <span className="text-sm uppercase tracking-[0.3em] text-primary">Web3 Ecosystem</span>
-              <h2 className="mt-4 font-display text-4xl font-semibold">Web3 Advisory Board</h2>
-            </div>
-            <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">Profiles in progress</div>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {web3Board.map((member) => <AdvisoryCard key={member.name} member={member} />)}
-          </div>
-        </section>
+        <section className="max-w-4xl"><span className="text-sm uppercase tracking-[0.3em] text-primary">Advisory Board</span><h1 className="mt-5 font-display text-6xl font-bold tracking-tight">Advisory Boards & Strategic Advisors.</h1><p className="mt-6 text-lg leading-8 text-zinc-400">A network of entrepreneurs, technology leaders and senior operators supporting Teragone Factory on strategy, engineering excellence, AI, critical platforms and Web3 challenges.</p></section>
+        <section className="mt-24"><div className="flex items-end justify-between gap-6"><div><span className="text-sm uppercase tracking-[0.3em] text-primary">Teragone Factory</span><h2 className="mt-4 font-display text-4xl font-semibold">Teragone Factory Strategic Advisors</h2></div><div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">6 partner profiles</div></div><div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">{teragoneBoard.map((member) => <AdvisoryCard key={member.name} member={member} />)}</div></section>
+        <section className="mt-28"><div className="flex items-end justify-between gap-6"><div><span className="text-sm uppercase tracking-[0.3em] text-primary">Web3 Ecosystem</span><h2 className="mt-4 font-display text-4xl font-semibold">Web3 Advisory Board</h2></div><div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">Profiles in progress</div></div><div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">{web3Board.map((member) => <AdvisoryCard key={member.name} member={member} />)}</div></section>
       </main>
       <FinalCTAEn />
       <Footer />
