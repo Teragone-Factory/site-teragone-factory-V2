@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/Button'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Nous rejoindre',
-  description: 'Rejoindre Teragone Factory : software engineering, IA, architecture, Web3 et systemes distribues.',
-  alternates: { canonical: '/nous-rejoindre/', languages: { fr: '/nous-rejoindre/', en: '/en/nous-rejoindre/' } },
+  title: 'Careers',
+  description: 'Join Teragone Factory: software engineering, AI, architecture, Web3 and distributed systems.',
+  alternates: { canonical: '/nous-rejoindre/', languages: { fr: '/fr/nous-rejoindre/', en: '/nous-rejoindre/' } },
 }
 
 const roles = [
