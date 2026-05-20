@@ -64,6 +64,12 @@ html:not([data-theme='light']) .text-zinc-400 { color: #D0D8E8 !important; }
 html:not([data-theme='light']) .text-zinc-500 { color: #B0BAD0 !important; }
 html:not([data-theme='light']) .shadow-primary\/10 { box-shadow: 0 30px 100px rgba(59,130,246,0.34) !important; }
 
+html:not([data-theme='light']) .light-hero-visual .hero-diagram-cell {
+  background: rgba(6,9,20,0.70) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  color: #FFFFFF !important;
+}
+
 html[data-theme='light'] body {
   background:
     radial-gradient(circle at 78% 8%, rgba(37,99,235,0.13), transparent 26%),
@@ -95,6 +101,13 @@ html[data-theme='light'] .bg-card,
 html[data-theme='light'] .bg-white\/\[0\.03\],
 html[data-theme='light'] .bg-white\/\[0\.04\],
 html[data-theme='light'] .bg-white\/\[0\.02\] { background-color: rgba(255,255,255,0.74) !important; }
+html[data-theme='light'] .light-hero-visual .hero-diagram-cell {
+  background: rgba(255,255,255,0.68) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+  color: #0F172A !important;
+}
+html[data-theme='light'] .light-hero-visual .hero-diagram-cell p:first-child { color: #2563EB !important; }
+html[data-theme='light'] .light-hero-visual .hero-diagram-cell p + p { color: #334155 !important; }
 html[data-theme='light'] .bg-\[\#101827\], html[data-theme='light'] .bg-\[\#0B1020\], html[data-theme='light'] .bg-\[\#0D1725\], html[data-theme='light'] .bg-\[\#111827\], html[data-theme='light'] .bg-\[\#0E1726\], html[data-theme='light'] .bg-\[\#101223\], html[data-theme='light'] .bg-\[\#0F172A\] { background-color: rgba(255,255,255,0.78) !important; }
 html[data-theme='light'] .from-\[\#101827\], html[data-theme='light'] .from-\[\#0D1725\], html[data-theme='light'] .from-\[\#0E1726\], html[data-theme='light'] .from-\[\#0F172A\] { --tw-gradient-from: rgba(255,255,255,0.80) var(--tw-gradient-from-position) !important; --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
 html[data-theme='light'] .to-\[\#0B1020\], html[data-theme='light'] .to-\[\#111827\], html[data-theme='light'] .to-\[\#101223\] { --tw-gradient-to: rgba(241,245,249,0.78) var(--tw-gradient-to-position) !important; }
