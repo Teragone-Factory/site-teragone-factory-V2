@@ -3,16 +3,19 @@ import { defineConfig, devices } from '@playwright/test'
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
-  timeout: 30000,
+  timeout: 45000,
+  expect: {
+    timeout: 10000,
+  },
   use: {
     baseURL: 'http://127.0.0.1:3000/site-teragone-factory-V2',
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'npx http-server out -p 3000 -a 127.0.0.1',
+    command: 'npm run build && npx serve@14.2.4 out -l tcp://127.0.0.1:3000',
     url: 'http://127.0.0.1:3000/site-teragone-factory-V2/',
     reuseExistingServer: !process.env.CI,
-    timeout: 120000,
+    timeout: 180000,
   },
   projects: [
     {
