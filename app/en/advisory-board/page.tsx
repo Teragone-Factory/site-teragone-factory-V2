@@ -60,20 +60,28 @@ const web3Board = [
   { name: 'AI x Web3 Advisor', role: 'Agentic Systems & Decentralized Infrastructure', image: 'AI', linkedin: '#', bio: 'Advisor profile to be completed with expertise at the convergence of AI agents, decentralized systems and trusted execution.', focus: ['AI agents', 'Web3', 'Trust layers'] },
 ]
 
-function AdvisoryCard({ member }: { member: typeof teragoneBoard[number] }) {
+type TeragoneAdvisor = (typeof teragoneBoard)[number]
+type Web3Advisor = (typeof web3Board)[number]
+type Advisor = TeragoneAdvisor | Web3Advisor
+
+function AdvisoryCard({ member }: { member: Advisor }) {
+  const hasPhoto = 'photo' in member && Boolean(member.photo)
+
   return (
     <article className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.05]">
       <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition duration-500 group-hover:scale-125" />
       <div className="relative flex h-full flex-col">
         <div className="flex items-start gap-5">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">
-            {'photo' in member && member.photo ? (
-              <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
-            ) : (
-              member.image
-            )}
-          </div>
-          <div>
+          {hasPhoto ? (
+            <div className="h-28 w-28 shrink-0 overflow-hidden rounded-[1.75rem] border border-primary/25 bg-white/[0.04] p-1 shadow-2xl shadow-primary/10">
+              <img src={(member as TeragoneAdvisor).photo} alt={member.name} className="h-full w-full rounded-[1.45rem] object-cover object-center" />
+            </div>
+          ) : (
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">
+              {member.image}
+            </div>
+          )}
+          <div className="min-w-0 pt-1">
             <h3 className="font-display text-2xl font-semibold text-white">{member.name}</h3>
             <p className="mt-2 text-sm leading-6 text-zinc-400">{member.role}</p>
           </div>
