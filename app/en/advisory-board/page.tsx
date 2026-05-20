@@ -20,6 +20,14 @@ const teragoneBoard = [
     focus: ['Strategy', 'Enterprise growth', 'Client development'],
   },
   {
+    name: 'Benoit Foucque',
+    role: 'CTO — Teragone Factory',
+    image: 'BF',
+    linkedin: '#',
+    bio: 'Benoit is Teragone Factory’s CTO. He brings deep engineering leadership across software architecture, distributed systems and production-grade delivery. His role is to strengthen technical direction, guide architecture choices and ensure that the company’s senior squads deliver robust, maintainable and scalable platforms for complex environments.',
+    focus: ['CTO', 'Architecture', 'Distributed systems'],
+  },
+  {
     name: 'Antoine Ternisien',
     role: 'Strategic Advisor — Data, Digital & Financial Services',
     image: 'AT',
@@ -96,7 +104,7 @@ export default function AdvisoryBoardPage() {
               <span className="text-sm uppercase tracking-[0.3em] text-primary">Teragone Factory</span>
               <h2 className="mt-4 font-display text-4xl font-semibold">Teragone Factory Strategic Advisors</h2>
             </div>
-            <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">5 partner profiles</div>
+            <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-sm text-zinc-400 md:block">6 partner profiles</div>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {teragoneBoard.map((member) => <AdvisoryCard key={member.name} member={member} />)}
