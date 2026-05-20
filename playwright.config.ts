@@ -12,10 +12,10 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'npm run build && npx serve@14.2.4 out -l tcp://127.0.0.1:3000',
+    command: 'npm run build && npx serve@14.2.4 out -l 3000',
     url: 'http://127.0.0.1:3000/site-teragone-factory-V2/',
     reuseExistingServer: !process.env.CI,
-    timeout: 180000,
+    timeout: 300000,
   },
   projects: [
     {
