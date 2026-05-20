@@ -7,6 +7,7 @@ const teragoneBoard = [
     name: 'Séverin Pellegrini',
     role: 'Co-founder & Managing Director — Tech, AI & Innovation',
     image: 'SP',
+    photo: '/sp.jpg',
     linkedin: 'https://www.linkedin.com/in/severinpellegrini/',
     bio: 'Séverin leads Teragone Factory with a focus on technology strategy, AI engineering, innovation and senior delivery. He supports organizations that need to modernize complex systems, industrialize AI initiatives and connect business value with strong engineering execution.',
     focus: ['AI Engineering', 'Innovation', 'Critical platforms'],
@@ -65,8 +66,12 @@ function AdvisoryCard({ member }: { member: typeof teragoneBoard[number] }) {
       <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition duration-500 group-hover:scale-125" />
       <div className="relative flex h-full flex-col">
         <div className="flex items-start gap-5">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">
-            {member.image}
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">
+            {'photo' in member && member.photo ? (
+              <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
+            ) : (
+              member.image
+            )}
           </div>
           <div>
             <h3 className="font-display text-2xl font-semibold text-white">{member.name}</h3>
