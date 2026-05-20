@@ -27,7 +27,7 @@ function AdvisoryCard({ member }: { member: Advisor }) {
       <div className="relative flex h-full flex-col">
         <div className="flex items-start gap-5">
           {photo ? (
-            <img src={photo} alt="" aria-hidden="true" width="112" height="112" className="relative z-10 block h-28 w-28 shrink-0 rounded-[1.75rem] border border-primary/25 bg-primary/10 object-cover object-center shadow-2xl shadow-primary/10" />
+            <div className="relative z-10 h-28 w-28 shrink-0 rounded-[1.75rem] border border-primary/25 bg-cover bg-center bg-no-repeat shadow-2xl shadow-primary/10" style={{ backgroundImage: `url('${photo}')` }} aria-label={member.name} />
           ) : (
             <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">{member.image}</div>
           )}
