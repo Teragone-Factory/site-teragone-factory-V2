@@ -3,7 +3,7 @@ import { NavBar } from '@/components/layout/NavBar'
 import { FinalCTAEn } from '@/components/sections/en/FinalCTAEn'
 
 const teragoneBoard = [
-  { name: 'Séverin Pellegrini', role: 'Co-founder & Managing Director — Tech, AI & Innovation', image: 'SP', photo: '/sp.jpg', linkedin: 'https://www.linkedin.com/in/severinpellegrini/', bio: 'Séverin leads Teragone Factory with a focus on technology strategy, AI engineering, innovation and senior delivery. He supports organizations that need to modernize complex systems, industrialize AI initiatives and connect business value with strong engineering execution.', focus: ['AI Engineering', 'Innovation', 'Critical platforms'] },
+  { name: 'Séverin Pellegrini', role: 'Co-founder & Managing Director — Tech, AI & Innovation', image: 'SP', photo: '/sp.jpg?v=3', linkedin: 'https://www.linkedin.com/in/severinpellegrini/', bio: 'Séverin leads Teragone Factory with a focus on technology strategy, AI engineering, innovation and senior delivery. He supports organizations that need to modernize complex systems, industrialize AI initiatives and connect business value with strong engineering execution.', focus: ['AI Engineering', 'Innovation', 'Critical platforms'] },
   { name: 'Julien Leroy', role: 'Co-founder & President — Strategy, Growth & Enterprise Development', image: 'JL', linkedin: 'https://www.linkedin.com/in/julien-leroy-bb246315/', bio: 'Julien brings an entrepreneurial and business development perspective to Teragone Factory. He contributes to the company strategy, client positioning and growth trajectory, helping align engineering capabilities with enterprise transformation priorities.', focus: ['Strategy', 'Enterprise growth', 'Client development'] },
   { name: 'Benoit Foucque', role: 'CTO — Teragone Factory', image: 'BF', linkedin: '#', bio: 'Benoit is Teragone Factory’s CTO. He brings deep engineering leadership across software architecture, distributed systems and production-grade delivery. His role is to strengthen technical direction, guide architecture choices and ensure that the company’s senior squads deliver robust, maintainable and scalable platforms for complex environments.', focus: ['CTO', 'Architecture', 'Distributed systems'] },
   { name: 'Antoine Ternisien', role: 'Strategic Advisor — Data, Digital & Financial Services', image: 'AT', linkedin: '#', bio: 'Antoine brings strong consulting and business development experience in banking, insurance, data and digital transformation. He helps connect Teragone Factory’s engineering capabilities with enterprise priorities, sector-specific constraints and high-value transformation opportunities.', focus: ['Data', 'Digital transformation', 'Financial services'] },
@@ -27,9 +27,7 @@ function AdvisoryCard({ member }: { member: Advisor }) {
       <div className="relative flex h-full flex-col">
         <div className="flex items-start gap-5">
           {photo ? (
-            <div className="h-28 w-28 shrink-0 overflow-hidden rounded-[1.75rem] border border-primary/25 bg-white/[0.04] p-1 shadow-2xl shadow-primary/10">
-              <img src={photo} alt={member.name} className="block h-full w-full rounded-[1.45rem] object-cover object-center" />
-            </div>
+            <img src={photo} alt="" aria-hidden="true" width="112" height="112" className="relative z-10 block h-28 w-28 shrink-0 rounded-[1.75rem] border border-primary/25 bg-primary/10 object-cover object-center shadow-2xl shadow-primary/10" />
           ) : (
             <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/20 to-cyan/10 font-display text-2xl font-bold text-primary shadow-xl shadow-primary/10">{member.image}</div>
           )}
