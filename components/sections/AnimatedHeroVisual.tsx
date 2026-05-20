@@ -15,17 +15,17 @@ export function AnimatedHeroVisual() {
         <div className="space-y-4">
           {rows.map((row) => (
             <div key={row.left} className="grid grid-cols-[1fr_42px_1fr_42px_1fr] items-center gap-2">
-              <div className="hero-diagram-cell rounded-xl border border-primary/15 bg-white/[0.68] p-3 backdrop-blur-xl">
+              <div className="hero-diagram-cell rounded-xl border border-white/10 bg-background/70 p-3 backdrop-blur-xl">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">{row.left}</p>
                 <p className="mt-1 text-xs text-zinc-400">{row.leftDetail}</p>
               </div>
               <div className="h-px bg-gradient-to-r from-primary/60 to-cyan/50" />
-              <div className="hero-diagram-cell rounded-xl border border-cyan/15 bg-white/[0.68] p-3 backdrop-blur-xl">
+              <div className="hero-diagram-cell rounded-xl border border-white/10 bg-background/70 p-3 backdrop-blur-xl">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan">{row.middle}</p>
                 <p className="mt-1 text-xs text-zinc-400">{row.middleDetail}</p>
               </div>
               <div className="h-px bg-gradient-to-r from-cyan/50 to-secondary/60" />
-              <div className="hero-diagram-cell rounded-xl border border-primary/15 bg-white/[0.68] p-3 backdrop-blur-xl">
+              <div className="hero-diagram-cell rounded-xl border border-white/10 bg-background/70 p-3 backdrop-blur-xl">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-secondary">{row.right}</p>
                 <p className="mt-1 text-xs text-zinc-400">{row.rightDetail}</p>
               </div>
