@@ -24,7 +24,7 @@ html[data-theme='light'] {
   --secondary: #2563EB;
   --cyan: #0891B2;
   --text: #0F172A;
-  --muted: #475569;
+  --muted: #334155;
   --border: rgba(15,23,42,0.10);
 }
 
@@ -104,10 +104,10 @@ html[data-theme='light'] .text-zinc-200,
 html[data-theme='light'] .text-zinc-300,
 html[data-theme='light'] .text-blue-100,
 html[data-theme='light'] .text-cyan-200,
-html[data-theme='light'] .text-violet-200 { color: #111827 !important; }
+html[data-theme='light'] .text-violet-200 { color: #0F172A !important; }
 html[data-theme='light'] .text-zinc-400,
 html[data-theme='light'] .text-zinc-500,
-html[data-theme='light'] .text-zinc-600 { color: #526173 !important; }
+html[data-theme='light'] .text-zinc-600 { color: #334155 !important; }
 html[data-theme='light'] .text-primary,
 html[data-theme='light'] .text-blue-300 { color: #2563EB !important; }
 html[data-theme='light'] .text-cyan { color: #0891B2 !important; }
