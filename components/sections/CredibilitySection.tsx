@@ -39,9 +39,9 @@ export function CredibilitySection() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-card/70 px-6 py-5 backdrop-blur-xl">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] px-6 py-5 backdrop-blur-xl">
             <p className="text-sm uppercase tracking-[0.24em] text-cyan">{isFrench ? 'Notre approche' : 'Our approach'}</p>
-            <p className="mt-2 text-zinc-300">{isFrench ? 'Moins de complexité inutile. Plus de visibilité, de qualité et de vitesse utile.' : 'Less unnecessary complexity. More visibility, quality and useful velocity.'}</p>
+            <p className="mt-2 text-zinc-400">{isFrench ? 'Moins de complexité inutile. Plus de visibilité, de qualité et de vitesse utile.' : 'Less unnecessary complexity. More visibility, quality and useful velocity.'}</p>
           </div>
         </div>
 
