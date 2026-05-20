@@ -8,31 +8,31 @@ import { ThemeToggle } from '@/components/layout/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { route } from '@/lib/routes'
 
-const frLinks = [
-  { href: '/expertises', label: 'Expertises' },
-  { href: '/use-cases', label: 'Cas d’usage' },
-  { href: '/notre-adn', label: 'Notre ADN' },
+const enLinks = [
+  { href: '/expertises', label: 'Expertise' },
+  { href: '/use-cases', label: 'Use Cases' },
+  { href: '/notre-adn', label: 'Our DNA' },
   { href: '/advisory-board', label: 'Advisory Board' },
   { href: '/blog', label: 'Blog' },
-  { href: '/nous-rejoindre', label: 'Rejoindre' },
+  { href: '/nous-rejoindre', label: 'Careers' },
 ]
 
-const enLinks = [
-  { href: '/en/expertises', label: 'Expertise' },
-  { href: '/en/use-cases', label: 'Use Cases' },
-  { href: '/en/notre-adn', label: 'Our DNA' },
-  { href: '/en/advisory-board', label: 'Advisory Board' },
-  { href: '/en/blog', label: 'Blog' },
-  { href: '/en/nous-rejoindre', label: 'Careers' },
+const frLinks = [
+  { href: '/fr/expertises', label: 'Expertises' },
+  { href: '/fr/use-cases', label: 'Cas d’usage' },
+  { href: '/fr/notre-adn', label: 'Notre ADN' },
+  { href: '/fr/advisory-board', label: 'Advisory Board' },
+  { href: '/fr/blog', label: 'Blog' },
+  { href: '/fr/nous-rejoindre', label: 'Rejoindre' },
 ]
 
 export function NavBar() {
   const pathname = usePathname() || '/'
   const cleanPath = pathname.replace(/^\/site-teragone-factory-V2/, '') || '/'
-  const isEnglish = cleanPath === '/en' || cleanPath.startsWith('/en/')
-  const links = isEnglish ? enLinks : frLinks
-  const homeHref = isEnglish ? '/en/' : '/'
-  const contactHref = isEnglish ? '/en/contact' : '/contact'
+  const isFrench = cleanPath === '/fr' || cleanPath.startsWith('/fr/')
+  const links = isFrench ? frLinks : enLinks
+  const homeHref = isFrench ? '/fr/' : '/'
+  const contactHref = isFrench ? '/fr/contact' : '/contact'
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-xl">
