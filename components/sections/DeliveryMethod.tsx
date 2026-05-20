@@ -34,9 +34,9 @@ export function DeliveryMethod() {
             <p className="mt-6 text-lg leading-8 text-zinc-400">
               {isFrench ? 'Une approche simple à lire, senior à l’exécution : comprendre vite, décider juste, livrer proprement et transmettre durablement.' : 'A clear, senior-led approach: understand fast, decide well, deliver cleanly and transfer knowledge over time.'}
             </p>
-            <div className="mt-8 rounded-3xl border border-white/10 bg-background/70 p-6 backdrop-blur-xl">
+            <div className="mt-8 rounded-3xl border border-primary/20 bg-primary/10 p-6 backdrop-blur-xl">
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan">{isFrench ? 'Résultat attendu' : 'Expected outcome'}</p>
-              <p className="mt-3 text-zinc-300">
+              <p className="mt-3 text-zinc-400">
                 {isFrench ? 'Moins d’ambiguïté, moins de dette, plus de vitesse utile et une plateforme réellement pilotable en production.' : 'Less ambiguity, less software debt, more useful velocity and a platform that can truly be operated in production.'}
               </p>
             </div>
