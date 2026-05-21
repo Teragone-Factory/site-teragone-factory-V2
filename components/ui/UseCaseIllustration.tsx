@@ -1,8 +1,8 @@
 import { asset } from '@/lib/routes'
 
 const illustrations = {
-  legacy: '/illustration%20use%20case%20High-criticality%20modernization%20and%20delivery..svg',
-  ai: '/illustration%20use%20case%20Industrializing%20AI%20use%20cases%20in%20a%20complex%20information%20system.svg',
+  legacy: '/illustration use case High-criticality modernization and delivery..svg',
+  ai: '/illustration use case Industrializing AI use cases in a complex information system.svg',
   mithril: '/mithril-logo.svg',
 }
 
