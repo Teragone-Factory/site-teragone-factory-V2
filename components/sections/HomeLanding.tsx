@@ -95,9 +95,9 @@ const data = {
 }
 
 function UseCaseThumbnail({ type }: { type: string }) {
-  if (type === 'mithril') return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-500/20 bg-gradient-to-br from-[#101827] to-[#0B1020] p-5"><MithrilLogo className="h-auto w-full max-w-[260px]" /></div>
-  if (type === 'ai') return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-cyan-400/15 bg-gradient-to-br from-[#0D1725] to-[#111827] p-5"><UseCaseIllustration type="ai" alt="Industrializing AI use cases in a complex information system" className="h-auto w-full max-w-[260px]" /></div>
-  return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-400/15 bg-gradient-to-br from-[#0E1726] to-[#111827] p-5"><UseCaseIllustration type="legacy" alt="High-criticality modernization and delivery" className="h-auto w-full max-w-[260px]" /></div>
+  if (type === 'mithril') return <div className="mb-6 flex h-28 items-center justify-center p-0"><MithrilLogo className="h-auto w-full max-w-[260px]" /></div>
+  if (type === 'ai') return <div className="mb-6 flex h-28 items-center justify-center p-0"><UseCaseIllustration type="ai" alt="Industrializing AI use cases in a complex information system" className="h-auto w-full max-w-[280px]" /></div>
+  return <div className="mb-6 flex h-28 items-center justify-center p-0"><UseCaseIllustration type="legacy" alt="High-criticality modernization and delivery" className="h-auto w-full max-w-[280px]" /></div>
 }
 
 export function HomeLanding() {
