@@ -14,9 +14,8 @@ export function UseCaseCard({ sector, pillar, problem, story, intervention, bene
       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition group-hover:scale-125" />
       <div className="relative">
         {thumbnail && (
-          <div className="mb-7 inline-flex items-center gap-3 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-[#101827] to-[#0B1020] px-5 py-4">
-            <div className="h-9 w-9 rounded-xl border border-blue-400/25 bg-blue-400/10" />
-            <span className="font-mono text-xs uppercase tracking-[0.28em] text-blue-300">Mithril Protocol</span>
+          <div className="mb-7 flex min-h-[170px] items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
+            <img src={thumbnail} alt={`${pillar} logo`} className="max-h-28 max-w-[260px] object-contain" />
           </div>
         )}
 
