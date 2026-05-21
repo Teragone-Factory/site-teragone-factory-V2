@@ -1,11 +1,9 @@
 import { asset } from '@/lib/routes'
 
-const auditFile = '/illustration use case Regaining control over technical debt and delivery slowdown.svg'
-
 const illustrations = {
   legacy: '/illustration use case High-criticality modernization and delivery..svg',
   ai: '/illustration use case Industrializing AI use cases in a complex information system.svg',
-  audit: auditFile,
+  audit: '/illustration use case Regaining control over technical debt and delivery slowdown.svg',
   mithril: '/mithril-logo.svg',
 }
 
