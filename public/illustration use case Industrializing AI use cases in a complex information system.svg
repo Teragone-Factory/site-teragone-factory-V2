@@ -1,0 +1,40 @@
+<svg width="720" height="360" viewBox="0 0 720 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="360" rx="28" fill="#0F172A"></rect>
+
+  <rect x="70" y="90" width="120" height="52" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="130" y="122" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">ERP / CRM</text>
+
+  <rect x="70" y="165" width="120" height="52" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="130" y="197" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Data Sources</text>
+
+  <rect x="70" y="240" width="120" height="52" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="130" y="272" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Workflows</text>
+
+  <rect x="255" y="85" width="210" height="190" rx="24" fill="#111827" stroke="#3B82F6" stroke-width="2"></rect>
+  <circle cx="360" cy="135" r="34" fill="#3B82F6" opacity="0.18"></circle>
+
+  <text x="360" y="205" text-anchor="middle" fill="white" font-size="22" font-family="Arial" font-weight="bold">
+    Enterprise AI
+  </text>
+
+  <text x="360" y="232" text-anchor="middle" fill="#94A3B8" font-size="14" font-family="Arial">
+    RAG • LLM • Governance
+  </text>
+
+  <rect x="530" y="105" width="120" height="52" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="590" y="137" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">AI Agents</text>
+
+  <rect x="530" y="180" width="120" height="52" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="590" y="212" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Insights</text>
+
+  <rect x="530" y="255" width="120" height="52" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="590" y="287" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Automation</text>
+
+  <path d="M190 116H255" stroke="#3B82F6" stroke-width="2.5"></path>
+  <path d="M190 191H255" stroke="#3B82F6" stroke-width="2.5"></path>
+  <path d="M190 266H255" stroke="#3B82F6" stroke-width="2.5"></path>
+
+  <path d="M465 116H530" stroke="#8B5CF6" stroke-width="2.5"></path>
+  <path d="M465 191H530" stroke="#8B5CF6" stroke-width="2.5"></path>
+  <path d="M465 266H530" stroke="#8B5CF6" stroke-width="2.5"></path>
+</svg>
