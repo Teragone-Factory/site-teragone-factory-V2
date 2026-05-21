@@ -1,13 +1,15 @@
 export function route(path: string) {
   if (path.startsWith('http')) return path
+  return path
+}
+
+export function asset(path: string) {
+  if (path.startsWith('http')) return path
   if (!path.startsWith('/')) return path
 
   const basePath = '/site-teragone-factory-V2'
-  const isBrowser = typeof window !== 'undefined'
-  const alreadyUnderBasePath = isBrowser && window.location.pathname.startsWith(basePath)
 
   if (path.startsWith(basePath)) return path
-  if (alreadyUnderBasePath) return path
 
   return `${basePath}${path}`
 }
