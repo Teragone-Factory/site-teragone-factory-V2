@@ -17,6 +17,7 @@ import { Card } from '@/components/ui/Card'
 import { MithrilLogo } from '@/components/ui/MithrilLogo'
 import { PillarCard } from '@/components/ui/PillarCard'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { UseCaseIllustration } from '@/components/ui/UseCaseIllustration'
 
 const data = {
   en: {
@@ -95,8 +96,8 @@ const data = {
 
 function UseCaseThumbnail({ type }: { type: string }) {
   if (type === 'mithril') return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-500/20 bg-gradient-to-br from-[#101827] to-[#0B1020] p-5"><MithrilLogo className="h-auto w-full max-w-[260px]" /></div>
-  if (type === 'ai') return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-cyan-400/15 bg-gradient-to-br from-[#0D1725] to-[#111827] p-5"><div className="grid w-full max-w-[240px] grid-cols-[1fr_auto_1fr] items-center gap-3"><div className="rounded-2xl border border-cyan-400/25 bg-cyan-400/10 px-4 py-3 text-center"><div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cyan-200">Data</div><div className="mt-1 text-xs text-zinc-300">knowledge</div></div><div className="h-px w-8 bg-cyan-300/40" /><div className="rounded-2xl border border-blue-400/25 bg-blue-400/10 px-4 py-3 text-center"><div className="font-mono text-[10px] uppercase tracking-[0.22em] text-blue-200">AI</div><div className="mt-1 text-xs text-zinc-300">workflow</div></div><div className="col-span-3 mx-auto mt-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400">governed integration</div></div></div>
-  return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-400/15 bg-gradient-to-br from-[#0E1726] to-[#111827] p-5"><div className="grid w-full max-w-[250px] grid-cols-[1fr_auto_1fr] items-center gap-3"><div className="rounded-2xl border border-white/10 bg-white/[0.04] p-3"><div className="mb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400">Before</div><div className="space-y-2"><div className="h-2 w-16 rounded-full bg-zinc-500/35" /><div className="h-2 w-20 rounded-full bg-zinc-500/25" /><div className="h-2 w-12 rounded-full bg-zinc-500/25" /></div></div><div className="font-mono text-lg text-blue-300">→</div><div className="rounded-2xl border border-blue-400/25 bg-blue-400/10 p-3"><div className="mb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-blue-300">After</div><div className="space-y-2"><div className="h-2 w-20 rounded-full bg-blue-300/50" /><div className="h-2 w-16 rounded-full bg-cyan-300/40" /><div className="h-2 w-14 rounded-full bg-white/30" /></div></div></div></div>
+  if (type === 'ai') return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-cyan-400/15 bg-gradient-to-br from-[#0D1725] to-[#111827] p-5"><UseCaseIllustration type="ai" alt="Industrializing AI use cases in a complex information system" className="h-auto w-full max-w-[260px]" /></div>
+  return <div className="mb-6 flex h-28 items-center justify-center rounded-2xl border border-blue-400/15 bg-gradient-to-br from-[#0E1726] to-[#111827] p-5"><UseCaseIllustration type="legacy" alt="High-criticality modernization and delivery" className="h-auto w-full max-w-[260px]" /></div>
 }
 
 export function HomeLanding() {
