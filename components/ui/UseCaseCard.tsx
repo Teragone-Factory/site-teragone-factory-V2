@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { asset, route } from '@/lib/routes'
+import { route } from '@/lib/routes'
 import { MithrilLogo } from '@/components/ui/MithrilLogo'
+import { UseCaseIllustration } from '@/components/ui/UseCaseIllustration'
 
 type UseCaseCardProps = {
   sector: string
@@ -10,28 +11,40 @@ type UseCaseCardProps = {
   intervention: string
   benefits: string
   thumbnail?: string
+  visual?: 'legacy' | 'ai' | 'mithril' | 'audit'
   href?: string
 }
 
-function thumbnailSrc(path: string) {
-  return asset(path)
+function CardVisual({ visual, pillar }: { visual?: UseCaseCardProps['visual']; pillar: string }) {
+  const isMithril = visual === 'mithril' || pillar.toLowerCase().includes('mithril')
+
+  if (isMithril) return <MithrilLogo className="h-auto w-full max-w-[360px]" />
+  if (visual === 'legacy') return <UseCaseIllustration type="legacy" alt="High-criticality modernization and delivery" className="h-auto w-full max-w-[360px]" />
+  if (visual === 'ai') return <UseCaseIllustration type="ai" alt="Industrializing AI use cases in a complex information system" className="h-auto w-full max-w-[360px]" />
+
+  return (
+    <div className="grid w-full max-w-[320px] grid-cols-[1fr_auto_1fr] items-center gap-3">
+      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+        <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400">Current</div>
+        <div className="space-y-2"><div className="h-2 w-20 rounded-full bg-zinc-500/35" /><div className="h-2 w-24 rounded-full bg-zinc-500/25" /><div className="h-2 w-16 rounded-full bg-zinc-500/25" /></div>
+      </div>
+      <div className="font-mono text-xl text-blue-300">→</div>
+      <div className="rounded-2xl border border-blue-400/25 bg-blue-400/10 p-4">
+        <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.22em] text-blue-300">Roadmap</div>
+        <div className="space-y-2"><div className="h-2 w-24 rounded-full bg-blue-300/50" /><div className="h-2 w-20 rounded-full bg-cyan-300/40" /><div className="h-2 w-14 rounded-full bg-white/30" /></div>
+      </div>
+    </div>
+  )
 }
 
-export function UseCaseCard({ sector, pillar, problem, story, intervention, benefits, thumbnail, href }: UseCaseCardProps) {
-  const isMithril = pillar.toLowerCase().includes('mithril')
+export function UseCaseCard({ sector, pillar, problem, story, intervention, benefits, visual, href }: UseCaseCardProps) {
   const content = (
     <>
       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition group-hover:scale-125" />
       <div className="relative">
-        {(thumbnail || isMithril) && (
-          <div className="mb-7 flex min-h-[190px] items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
-            {isMithril ? (
-              <MithrilLogo className="h-auto w-full max-w-[360px]" />
-            ) : thumbnail ? (
-              <img src={thumbnailSrc(thumbnail)} alt={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain" />
-            ) : null}
-          </div>
-        )}
+        <div className="mb-7 flex min-h-[190px] items-center justify-center p-0">
+          <CardVisual visual={visual} pillar={pillar} />
+        </div>
 
         <div className="mb-6 flex flex-wrap gap-3">
           <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">{pillar}</span>
