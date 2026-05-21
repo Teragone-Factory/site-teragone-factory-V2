@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { asset, route } from '@/lib/routes'
+import { MithrilLogo } from '@/components/ui/MithrilLogo'
 
 type UseCaseCardProps = {
   sector: string
@@ -25,21 +26,7 @@ export function UseCaseCard({ sector, pillar, problem, story, intervention, bene
         {thumbnail && (
           <div className="mb-7 flex min-h-[190px] items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
             {isMithril ? (
-              <div
-                aria-label={`${pillar} logo`}
-                role="img"
-                className="h-28 w-full max-w-[360px] bg-black dark:bg-white"
-                style={{
-                  WebkitMaskImage: `url(${thumbnailSrc(thumbnail)})`,
-                  maskImage: `url(${thumbnailSrc(thumbnail)})`,
-                  WebkitMaskRepeat: 'no-repeat',
-                  maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center',
-                  maskPosition: 'center',
-                  WebkitMaskSize: 'contain',
-                  maskSize: 'contain',
-                }}
-              />
+              <MithrilLogo className="h-auto w-full max-w-[360px]" />
             ) : (
               <img src={thumbnailSrc(thumbnail)} alt={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain" />
             )}
