@@ -1,4 +1,4 @@
-import { route } from '@/lib/routes'
+import { asset } from '@/lib/routes'
 
 type UseCaseCardProps = {
   sector: string
@@ -11,7 +11,7 @@ type UseCaseCardProps = {
 }
 
 function thumbnailSrc(path: string) {
-  return route(path)
+  return asset(path)
 }
 
 export function UseCaseCard({ sector, pillar, problem, story, intervention, benefits, thumbnail }: UseCaseCardProps) {
@@ -21,9 +21,7 @@ export function UseCaseCard({ sector, pillar, problem, story, intervention, bene
       <div className="relative">
         {thumbnail && (
           <div className="mb-7 flex min-h-[190px] items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
-            <object data={thumbnailSrc(thumbnail)} type="image/svg+xml" aria-label={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain">
-              <img src={thumbnailSrc(thumbnail)} alt={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain" />
-            </object>
+            <img src={thumbnailSrc(thumbnail)} alt={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain" />
           </div>
         )}
 
