@@ -6,27 +6,27 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Audit & Architecture',
-  description: 'Audits architecture, dette technique, performance, securite, gouvernance et modernisation legacy.',
-  alternates: { canonical: '/expertises/audit/', languages: { fr: '/expertises/audit/', en: '/en/expertises/audit/' } },
+  description: 'Architecture audits, technical debt, performance, security, governance and legacy modernization.',
+  alternates: { canonical: '/expertises/audit/', languages: { fr: '/fr/expertises/audit/', en: '/expertises/audit/' } },
 }
 
 const sections = [
-  { title: 'Audit architecture & dette technique', expertise: 'Nous analysons les architectures existantes, le code, les flux, les dependances, la dette technique et les risques qui ralentissent la maintenabilite, la performance ou la capacite de delivery.', actions: ['Cartographie applicative, technique et fonctionnelle', 'Analyse codebase, dependances, qualite, complexite et dette', 'Identification des risques architecture, securite, performance et scalabilite', 'Roadmap de remediation priorisee par impact metier et effort'] },
-  { title: 'Modernisation legacy', expertise: 'Nous aidons les organisations a moderniser leurs systemes critiques sans tout reconstruire lorsque ce n est pas necessaire, avec une trajectoire progressive, controlee et orientee valeur.', actions: ['Decomposition de monolithe, modularisation et strategie de migration', 'Definition architecture cible cloud-ready, AI-ready et maintenable', 'Arbitrage entre rebuild, reprise, extraction de services et amelioration incrementale', 'Accompagnement des equipes internes pendant la transition technique'] },
-  { title: 'Performance, securite & production readiness', expertise: 'Nous evaluons la capacite reelle d un systeme a tenir la charge, etre observe, securise, opere et livre en production dans de bonnes conditions.', actions: ['Analyse performance, monitoring, logs, alerting et observabilite', 'Revue securite applicative, dependances, secrets, CI/CD et pratiques DevSecOps', 'Recommandations infrastructure, cloud, couts et resilience', 'Plan industrialisation pour securiser les releases production'] },
-  { title: 'Gouvernance engineering', expertise: 'Un audit utile ne produit pas seulement un rapport. Il aide les equipes a decider, prioriser et reprendre le controle du delivery et de l architecture.', actions: ['Restitution claire pour DSI, CTO, metiers et equipes techniques', 'Matrice risques, impacts, quick wins et chantiers structurants', 'Definition de standards engineering et pratiques de gouvernance', 'Plan action operationnel executable par vos equipes ou nos squads seniors'] },
+  { title: 'Architecture audit & technical debt', expertise: 'We analyze existing architectures, codebases, flows, dependencies, technical debt and risks that slow down maintainability, performance or delivery capacity.', actions: ['Application, technical and functional mapping', 'Codebase, dependency, quality, complexity and debt analysis', 'Architecture, security, performance and scalability risk identification', 'Remediation roadmap prioritized by business impact and effort'] },
+  { title: 'Legacy modernization', expertise: 'We help organizations modernize critical systems without rebuilding everything when it is not necessary, through a progressive, controlled and value-oriented trajectory.', actions: ['Monolith decomposition, modularization and migration strategy', 'Target architecture definition: cloud-ready, AI-ready and maintainable', 'Arbitration between rebuild, takeover, service extraction and incremental improvement', 'Support for internal teams during the technical transition'] },
+  { title: 'Performance, security & production readiness', expertise: 'We assess the real ability of a system to handle load, be observed, secured, operated and released in production under good conditions.', actions: ['Performance, monitoring, logs, alerting and observability analysis', 'Application security, dependencies, secrets, CI/CD and DevSecOps practices review', 'Infrastructure, cloud, cost and resilience recommendations', 'Industrialization plan to secure production releases'] },
+  { title: 'Engineering governance', expertise: 'A useful audit does not only produce a report. It helps teams decide, prioritize and regain control of delivery and architecture.', actions: ['Clear restitution for CIOs, CTOs, business stakeholders and technical teams', 'Risk, impact, quick-win and structural initiative matrix', 'Definition of engineering standards and governance practices', 'Operational action plan executable by your teams or our senior squads'] },
 ]
 
-export default function AuditFR() {
+export default function AuditEN() {
   return (
     <>
       <NavBar />
       <main className="mx-auto max-w-7xl px-6 py-24 text-white">
         <span className="text-sm uppercase tracking-[0.3em] text-primary">Audit & Architecture</span>
-        <h1 className="mt-4 max-w-5xl font-display text-6xl font-bold tracking-tight">Comprendre, prioriser et securiser vos systemes critiques.</h1>
-        <p className="mt-8 max-w-4xl text-lg leading-8 text-zinc-400">Nous realisons des audits techniques actionnables couvrant architecture, dette technique, performance, securite, gouvernance, modernisation legacy et trajectoire de delivery.</p>
+        <h1 className="mt-4 max-w-5xl font-display text-6xl font-bold tracking-tight">Understand, prioritize and secure your critical systems.</h1>
+        <p className="mt-8 max-w-4xl text-lg leading-8 text-zinc-400">We run actionable technical audits covering architecture, technical debt, performance, security, governance, legacy modernization and delivery trajectory.</p>
         <div className="mt-16 grid gap-8 md:grid-cols-2">{sections.map((section) => <ExpertiseDetailCard key={section.title} {...section} />)}</div>
-        <div className="mt-14"><Button href="/contact">Lancer un audit</Button></div>
+        <div className="mt-14"><Button href="/contact">Launch an audit</Button></div>
       </main>
       <Footer />
     </>
