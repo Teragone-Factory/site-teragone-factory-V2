@@ -23,13 +23,13 @@ export function UseCaseCard({ sector, pillar, problem, story, intervention, bene
     <>
       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition group-hover:scale-125" />
       <div className="relative">
-        {thumbnail && (
+        {(thumbnail || isMithril) && (
           <div className="mb-7 flex min-h-[190px] items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
             {isMithril ? (
               <MithrilLogo className="h-auto w-full max-w-[360px]" />
-            ) : (
+            ) : thumbnail ? (
               <img src={thumbnailSrc(thumbnail)} alt={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain" />
-            )}
+            ) : null}
           </div>
         )}
 
@@ -42,7 +42,6 @@ export function UseCaseCard({ sector, pillar, problem, story, intervention, bene
 
         <div className="mt-6 space-y-5 text-sm leading-7 text-zinc-400">
           <p>{story}</p>
-
           <p><strong className="text-zinc-200">What we delivered — </strong>{intervention}</p>
           <p><strong className="text-zinc-200">Business impact — </strong>{benefits}</p>
         </div>
