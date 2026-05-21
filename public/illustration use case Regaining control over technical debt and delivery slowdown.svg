@@ -1,0 +1,51 @@
+<svg width="720" height="360" viewBox="0 0 720 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="360" rx="28" fill="#0F172A"></rect>
+
+  <rect x="60" y="95" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="125" y="128" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Codebase</text>
+
+  <rect x="60" y="175" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="125" y="208" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Dependencies</text>
+
+  <rect x="60" y="255" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="125" y="288" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Critical Flows</text>
+
+  <rect x="245" y="78" width="230" height="205" rx="24" fill="#111827" stroke="#8B5CF6" stroke-width="2"></rect>
+
+  <circle cx="360" cy="135" r="34" fill="#8B5CF6" opacity="0.15"></circle>
+  <path d="M346 135L356 145L376 121" stroke="#8B5CF6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="360" cy="135" r="24" stroke="#8B5CF6" stroke-width="2"></circle>
+
+  <text x="360" y="215" text-anchor="middle" fill="white" font-size="22" font-family="Arial" font-weight="bold">
+    Platform Audit
+  </text>
+
+  <text x="360" y="242" text-anchor="middle" fill="#94A3B8" font-size="14" font-family="Arial">
+    Audit • Quick Wins • Roadmap
+  </text>
+
+  <rect x="530" y="95" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="595" y="128" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Priorities</text>
+
+  <rect x="530" y="175" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="595" y="208" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Governance</text>
+
+  <rect x="530" y="255" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
+  <text x="595" y="288" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">Delivery Capacity</text>
+
+  <path d="M190 123H245" stroke="#3B82F6" stroke-width="2.5"></path>
+  <path d="M190 203H245" stroke="#3B82F6" stroke-width="2.5"></path>
+  <path d="M190 283H245" stroke="#3B82F6" stroke-width="2.5"></path>
+
+  <path d="M475 123H530" stroke="#8B5CF6" stroke-width="2.5"></path>
+  <path d="M475 203H530" stroke="#8B5CF6" stroke-width="2.5"></path>
+  <path d="M475 283H530" stroke="#8B5CF6" stroke-width="2.5"></path>
+
+  <circle cx="218" cy="123" r="3" fill="#3B82F6"></circle>
+  <circle cx="218" cy="203" r="3" fill="#3B82F6"></circle>
+  <circle cx="218" cy="283" r="3" fill="#3B82F6"></circle>
+
+  <circle cx="502" cy="123" r="3" fill="#8B5CF6"></circle>
+  <circle cx="502" cy="203" r="3" fill="#8B5CF6"></circle>
+  <circle cx="502" cy="283" r="3" fill="#8B5CF6"></circle>
+</svg>
