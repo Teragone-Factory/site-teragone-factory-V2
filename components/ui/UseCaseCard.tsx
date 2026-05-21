@@ -11,11 +11,11 @@ type UseCaseCardProps = {
   intervention: string
   benefits: string
   thumbnail?: string
-  visual?: 'legacy' | 'ai' | 'mithril' | 'audit'
+  visual?: string
   href?: string
 }
 
-function CardVisual({ visual, pillar }: { visual?: UseCaseCardProps['visual']; pillar: string }) {
+function CardVisual({ visual, pillar }: { visual?: string; pillar: string }) {
   const isMithril = visual === 'mithril' || pillar.toLowerCase().includes('mithril')
 
   if (isMithril) return <MithrilLogo className="h-auto w-full max-w-[360px]" />
