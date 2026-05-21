@@ -15,13 +15,33 @@ function thumbnailSrc(path: string) {
 }
 
 export function UseCaseCard({ sector, pillar, problem, story, intervention, benefits, thumbnail }: UseCaseCardProps) {
+  const isMithril = pillar.toLowerCase().includes('mithril')
+
   return (
     <article className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-card p-8 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-white/[0.04]">
       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition group-hover:scale-125" />
       <div className="relative">
         {thumbnail && (
           <div className="mb-7 flex min-h-[190px] items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
-            <img src={thumbnailSrc(thumbnail)} alt={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain" />
+            {isMithril ? (
+              <div
+                aria-label={`${pillar} logo`}
+                role="img"
+                className="h-28 w-full max-w-[360px] bg-black dark:bg-white"
+                style={{
+                  WebkitMaskImage: `url(${thumbnailSrc(thumbnail)})`,
+                  maskImage: `url(${thumbnailSrc(thumbnail)})`,
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'center',
+                  maskPosition: 'center',
+                  WebkitMaskSize: 'contain',
+                  maskSize: 'contain',
+                }}
+              />
+            ) : (
+              <img src={thumbnailSrc(thumbnail)} alt={`${pillar} logo`} className="h-auto max-h-36 w-full max-w-[360px] object-contain" />
+            )}
           </div>
         )}
 
