@@ -21,20 +21,9 @@ function CardVisual({ visual, pillar }: { visual?: string; pillar: string }) {
   if (isMithril) return <MithrilLogo className="h-auto w-full max-w-[360px]" />
   if (visual === 'legacy') return <UseCaseIllustration type="legacy" alt="High-criticality modernization and delivery" className="h-auto w-full max-w-[360px]" />
   if (visual === 'ai') return <UseCaseIllustration type="ai" alt="Industrializing AI use cases in a complex information system" className="h-auto w-full max-w-[360px]" />
+  if (visual === 'audit') return <UseCaseIllustration type="audit" alt="Technical debt and delivery slowdown illustration" className="h-auto w-full max-w-[360px]" />
 
-  return (
-    <div className="grid w-full max-w-[320px] grid-cols-[1fr_auto_1fr] items-center gap-3">
-      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-        <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400">Current</div>
-        <div className="space-y-2"><div className="h-2 w-20 rounded-full bg-zinc-500/35" /><div className="h-2 w-24 rounded-full bg-zinc-500/25" /><div className="h-2 w-16 rounded-full bg-zinc-500/25" /></div>
-      </div>
-      <div className="font-mono text-xl text-blue-300">→</div>
-      <div className="rounded-2xl border border-blue-400/25 bg-blue-400/10 p-4">
-        <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.22em] text-blue-300">Roadmap</div>
-        <div className="space-y-2"><div className="h-2 w-24 rounded-full bg-blue-300/50" /><div className="h-2 w-20 rounded-full bg-cyan-300/40" /><div className="h-2 w-14 rounded-full bg-white/30" /></div>
-      </div>
-    </div>
-  )
+  return null
 }
 
 export function UseCaseCard({ sector, pillar, problem, story, intervention, benefits, visual, href }: UseCaseCardProps) {
