@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teragone-factory.github.io/site-teragone-factory-V2/sitemap.xml
