@@ -8,40 +8,40 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-displ
 export const metadata: Metadata = {
   metadataBase: new URL('https://teragone-factory.github.io/site-teragone-factory-V2'),
   title: {
-    default: 'Teragone Factory — Engineering Senior, IA & Web3',
+    default: 'Teragone Factory — AI Engineering, Software Architecture & Web3',
     template: '%s | Teragone Factory',
   },
   description:
-    'Filiale digitale, IA et Web3 du groupe Teragone Solutions. Squads seniors, AI Engineering, systèmes agentiques, software craftsmanship et plateformes critiques.',
+    'Digital & AI Delivery Factory focused on AI Engineering, software architecture, distributed systems, senior delivery and Web3 infrastructure.',
   keywords: [
-    'ai engineering france',
+    'ai engineering',
+    'software architecture',
+    'distributed systems',
+    'web3 engineering',
+    'legacy modernization',
+    'enterprise ai platform',
     'software craftsmanship',
-    'squad senior développement',
-    'web3 blockchain consulting',
-    'architecture logicielle',
-    'modernisation legacy',
-    'systèmes agentiques production',
   ],
   openGraph: {
-    title: 'Teragone Factory — Engineering Senior, IA & Web3',
+    title: 'Teragone Factory — AI Engineering, Software Architecture & Web3',
     description:
-      'Digital & AI Delivery Factory. Architecture, delivery senior, AI Engineering, Web3 et systèmes critiques.',
+      'Digital & AI Delivery Factory. Architecture, AI Engineering, distributed systems and senior delivery for critical environments.',
     url: '/',
     siteName: 'Teragone Factory',
-    locale: 'fr_FR',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Teragone Factory — Engineering Senior, IA & Web3',
+    title: 'Teragone Factory — AI Engineering, Software Architecture & Web3',
     description:
-      'Architecture, delivery senior, AI Engineering, Web3 et systèmes critiques.',
+      'Architecture, AI Engineering, distributed systems and senior delivery for critical environments.',
   },
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body className={`${dmSans.variable} ${spaceGrotesk.variable} bg-background text-white font-sans antialiased`}>
         {children}
       </body>
