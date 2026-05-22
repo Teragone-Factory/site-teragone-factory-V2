@@ -24,7 +24,7 @@ export function Footer() {
         { href: '/fr/expertises', label: 'Expertises' },
         { href: '/fr/use-cases', label: 'Use Cases' },
         { href: '/fr/notre-adn', label: 'Notre ADN' },
-        { href: '/fr/blog', label: 'Blog' },
+        { href: '/blog', label: 'Blog' },
         { href: '/fr/nous-rejoindre', label: 'Rejoindre' },
         { href: '/fr/contact', label: 'Contact' },
       ]
@@ -39,14 +39,16 @@ export function Footer() {
 
   const legalLinks = isFrench
     ? [
-        { href: '/legal', label: 'Mentions légales' },
-        { href: '/terms', label: 'CGU' },
-        { href: '/cookies', label: 'Politique de cookies' },
+        { href: '/fr/legal', label: 'Mentions légales' },
+        { href: '/fr/terms', label: 'CGU' },
+        { href: '/fr/cookies', label: 'Politique de cookies' },
+        { href: '/fr/privacy', label: 'Politique de confidentialité' },
       ]
     : [
         { href: '/legal', label: 'Legal notice' },
         { href: '/terms', label: 'Terms of use' },
         { href: '/cookies', label: 'Cookie policy' },
+        { href: '/privacy', label: 'Privacy policy' },
       ]
 
   return (
