@@ -37,6 +37,18 @@ export function Footer() {
         { href: '/contact', label: 'Contact' },
       ]
 
+  const legalLinks = isFrench
+    ? [
+        { href: '/legal', label: 'Mentions légales' },
+        { href: '/terms', label: 'CGU' },
+        { href: '/cookies', label: 'Politique de cookies' },
+      ]
+    : [
+        { href: '/legal', label: 'Legal notice' },
+        { href: '/terms', label: 'Terms of use' },
+        { href: '/cookies', label: 'Cookie policy' },
+      ]
+
   return (
     <footer className="border-t border-white/5 bg-[#09090D]">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.3fr_0.7fr_0.7fr]">
@@ -75,22 +87,41 @@ export function Footer() {
 
         <div className="content-start text-sm text-zinc-400">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">
-            Social
+            Legal
           </p>
 
           <div className="flex flex-col gap-3">
-            {socialLinks.map((link) => (
-              <a
+            {legalLinks.map((link) => (
+              <Link
                 key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
+                href={route(link.href)}
                 className="group inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 transition hover:border-primary/40 hover:bg-white/[0.06] hover:text-white"
               >
                 <span>{link.label}</span>
                 <span className="text-primary transition group-hover:translate-x-1">→</span>
-              </a>
+              </Link>
             ))}
+          </div>
+
+          <div className="mt-8">
+            <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">
+              Social
+            </p>
+
+            <div className="flex flex-col gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 transition hover:border-primary/40 hover:bg-white/[0.06] hover:text-white"
+                >
+                  <span>{link.label}</span>
+                  <span className="text-primary transition group-hover:translate-x-1">→</span>
+                </a>
+              ))}
+            </div>
           </div>
 
           <p className="mt-6 text-xs leading-6 text-zinc-600">
