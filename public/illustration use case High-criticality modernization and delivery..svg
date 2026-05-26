@@ -1,76 +1,50 @@
 <svg width="720" height="360" viewBox="0 0 720 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="720" height="360" rx="28" fill="#0F172A"></rect>
-
-  <!-- Left systems -->
-  <rect x="60" y="95" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
-  <text x="125" y="128" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">
-    Legacy Systems
-  </text>
-
-  <rect x="60" y="175" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
-  <text x="125" y="208" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">
-    Infrastructure
-  </text>
-
-  <rect x="60" y="255" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
-  <text x="125" y="288" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">
-    Operations
-  </text>
-
-  <!-- Center platform -->
-  <rect x="245" y="78" width="230" height="205" rx="24" fill="#111827" stroke="#06B6D4" stroke-width="2"></rect>
-
-  <!-- Mobility icon -->
+  <style>
+    .tf-bg { fill: #F8FAFC; }
+    .tf-card { fill: #EEF4FF; stroke: #BFDBFE; }
+    .tf-core { fill: #EFF6FF; stroke: #06B6D4; }
+    .tf-main { fill: #0F172A; }
+    .tf-muted { fill: #475569; }
+    @media (prefers-color-scheme: dark) {
+      .tf-bg { fill: #0F172A; }
+      .tf-card { fill: #1E293B; stroke: #334155; }
+      .tf-core { fill: #111827; stroke: #06B6D4; }
+      .tf-main { fill: #FFFFFF; }
+      .tf-muted { fill: #94A3B8; }
+    }
+  </style>
+  <rect width="720" height="360" rx="28" class="tf-bg"></rect>
+  <rect x="60" y="95" width="130" height="56" rx="14" class="tf-card"></rect>
+  <text x="125" y="128" text-anchor="middle" class="tf-main" font-size="16" font-family="Arial">Legacy Systems</text>
+  <rect x="60" y="175" width="130" height="56" rx="14" class="tf-card"></rect>
+  <text x="125" y="208" text-anchor="middle" class="tf-main" font-size="16" font-family="Arial">Infrastructure</text>
+  <rect x="60" y="255" width="130" height="56" rx="14" class="tf-card"></rect>
+  <text x="125" y="288" text-anchor="middle" class="tf-main" font-size="16" font-family="Arial">Operations</text>
+  <rect x="245" y="78" width="230" height="205" rx="24" class="tf-core" stroke-width="2"></rect>
   <circle cx="360" cy="135" r="34" fill="#06B6D4" opacity="0.15"></circle>
-
   <rect x="334" y="122" width="52" height="22" rx="6" stroke="#06B6D4" stroke-width="2"></rect>
   <circle cx="345" cy="151" r="5" fill="#06B6D4"></circle>
   <circle cx="375" cy="151" r="5" fill="#06B6D4"></circle>
-
-  <!-- Tracks -->
   <path d="M347 162L340 182" stroke="#06B6D4" stroke-width="2"></path>
   <path d="M373 162L380 182" stroke="#06B6D4" stroke-width="2"></path>
   <path d="M343 176H377" stroke="#06B6D4" stroke-width="2"></path>
-
-  <!-- Text -->
-  <text x="360" y="215" text-anchor="middle" fill="white" font-size="22" font-family="Arial" font-weight="bold">
-    Mobility Delivery
-  </text>
-
-  <text x="360" y="242" text-anchor="middle" fill="#94A3B8" font-size="14" font-family="Arial">
-    Audit • Delivery • Rollout
-  </text>
-
-  <!-- Right outputs -->
-  <rect x="530" y="95" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
-  <text x="595" y="128" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">
-    Production
-  </text>
-
-  <rect x="530" y="175" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
-  <text x="595" y="208" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">
-    Monitoring
-  </text>
-
-  <rect x="530" y="255" width="130" height="56" rx="14" fill="#1E293B" stroke="#334155"></rect>
-  <text x="595" y="288" text-anchor="middle" fill="#E2E8F0" font-size="16" font-family="Arial">
-    Reliability
-  </text>
-
-  <!-- Connections -->
+  <text x="360" y="215" text-anchor="middle" class="tf-main" font-size="22" font-family="Arial" font-weight="bold">Mobility Delivery</text>
+  <text x="360" y="242" text-anchor="middle" class="tf-muted" font-size="14" font-family="Arial">Audit • Delivery • Rollout</text>
+  <rect x="530" y="95" width="130" height="56" rx="14" class="tf-card"></rect>
+  <text x="595" y="128" text-anchor="middle" class="tf-main" font-size="16" font-family="Arial">Production</text>
+  <rect x="530" y="175" width="130" height="56" rx="14" class="tf-card"></rect>
+  <text x="595" y="208" text-anchor="middle" class="tf-main" font-size="16" font-family="Arial">Monitoring</text>
+  <rect x="530" y="255" width="130" height="56" rx="14" class="tf-card"></rect>
+  <text x="595" y="288" text-anchor="middle" class="tf-main" font-size="16" font-family="Arial">Reliability</text>
   <path d="M190 123H245" stroke="#06B6D4" stroke-width="2.5"></path>
   <path d="M190 203H245" stroke="#06B6D4" stroke-width="2.5"></path>
   <path d="M190 283H245" stroke="#06B6D4" stroke-width="2.5"></path>
-
   <path d="M475 123H530" stroke="#8B5CF6" stroke-width="2.5"></path>
   <path d="M475 203H530" stroke="#8B5CF6" stroke-width="2.5"></path>
   <path d="M475 283H530" stroke="#8B5CF6" stroke-width="2.5"></path>
-
-  <!-- Connection dots -->
   <circle cx="218" cy="123" r="3" fill="#06B6D4"></circle>
   <circle cx="218" cy="203" r="3" fill="#06B6D4"></circle>
   <circle cx="218" cy="283" r="3" fill="#06B6D4"></circle>
-
   <circle cx="502" cy="123" r="3" fill="#8B5CF6"></circle>
   <circle cx="502" cy="203" r="3" fill="#8B5CF6"></circle>
   <circle cx="502" cy="283" r="3" fill="#8B5CF6"></circle>
