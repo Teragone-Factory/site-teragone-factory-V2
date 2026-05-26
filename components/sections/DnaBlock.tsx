@@ -3,10 +3,10 @@
 import { usePathname } from 'next/navigation'
 
 const fr = [
-  ['Craftsmanship', 'Qualite durable', 'Des systemes lisibles, testables et maintenables, concus pour durer au-dela du premier delivery.'],
-  ['AI Engineering', 'Delivery augmente', 'L IA integree aux pratiques de developpement : analyse, tests, documentation, refactoring et automatisation maitrisee.'],
-  ['Ownership', 'Responsabilite', 'Des equipes seniors qui assument la qualite, les choix techniques et la mise en production.'],
-  ['Transmission', 'Impact long terme', 'Des decisions documentees, des pratiques partagees et des equipes internes qui montent en competence.'],
+  ['Craftsmanship', 'Qualité durable', 'Nous concevons des systèmes lisibles, testables et maintenables, capables de continuer à évoluer après la première mise en production.'],
+  ['AI Engineering', 'Delivery augmenté', 'Nous intégrons l’IA dans les pratiques d’ingénierie pour accélérer l’analyse, les tests, la documentation, le refactoring et l’automatisation sans sacrifier la maîtrise technique.'],
+  ['Ownership', 'Responsabilité', 'Nos équipes seniors assument les choix d’architecture, la qualité d’exécution et les conditions réelles de mise en production.'],
+  ['Transmission', 'Impact long terme', 'Nous documentons les décisions, partageons les pratiques et faisons monter les équipes internes en compétence tout au long de la mission.'],
 ]
 
 const en = [
@@ -28,10 +28,10 @@ export function DnaBlock() {
         <div>
           <span className="text-sm uppercase tracking-[0.3em] text-primary">{isFrench ? 'Notre ADN' : 'Our DNA'}</span>
           <h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">
-            {isFrench ? 'Culture engineering, pragmatisme et excellence technique.' : 'Engineering culture, pragmatism and technical excellence.'}
+            {isFrench ? 'Une culture d’ingénierie exigeante, pragmatique et orientée production.' : 'Engineering culture, pragmatism and technical excellence.'}
           </h2>
           <p className="mt-6 text-lg leading-8 text-zinc-400">
-            {isFrench ? 'Nous combinons software craftsmanship, AI engineering et transmission pour construire des systemes utiles, robustes et exploitables par les equipes.' : 'We combine software craftsmanship, AI engineering and knowledge transfer to build useful, robust and truly operable systems.'}
+            {isFrench ? 'Nous combinons software craftsmanship, AI engineering et transmission pour construire des systèmes utiles, robustes et réellement exploitables par les équipes.' : 'We combine software craftsmanship, AI engineering and knowledge transfer to build useful, robust and truly operable systems.'}
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
