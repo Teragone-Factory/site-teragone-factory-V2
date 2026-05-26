@@ -14,11 +14,16 @@ type UseCaseIllustrationProps = {
 }
 
 export function UseCaseIllustration({ type, alt, className = '' }: UseCaseIllustrationProps) {
+  const themeAwareClassName = [
+    className || 'h-auto w-full max-w-[360px]',
+    'mix-blend-multiply dark:mix-blend-normal',
+  ].join(' ')
+
   return (
     <img
       src={asset(illustrations[type])}
       alt={alt}
-      className={className || 'h-auto w-full max-w-[360px]'}
+      className={themeAwareClassName}
     />
   )
 }
