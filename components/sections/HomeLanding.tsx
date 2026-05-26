@@ -95,11 +95,9 @@ const data = {
 }
 
 function UseCaseThumbnail({ type }: { type: string }) {
-  const visualShell = 'mb-6 flex h-28 items-center justify-center rounded-2xl bg-[#0F172A] p-4 shadow-[0_18px_50px_rgba(15,23,42,0.16)]'
-
-  if (type === 'mithril') return <div className={visualShell}><MithrilLogo className="h-auto w-full max-w-[260px]" /></div>
-  if (type === 'ai') return <div className={visualShell}><UseCaseIllustration type="ai" alt="Industrializing AI use cases in a complex information system" className="h-auto w-full max-w-[280px]" /></div>
-  return <div className={visualShell}><UseCaseIllustration type="legacy" alt="High-criticality modernization and delivery" className="h-auto w-full max-w-[280px]" /></div>
+  if (type === 'mithril') return <div className="mb-6 flex h-28 items-center justify-center p-0"><MithrilLogo className="h-auto w-full max-w-[260px]" /></div>
+  if (type === 'ai') return <div className="mb-6 flex h-28 items-center justify-center p-0"><UseCaseIllustration type="ai" alt="Industrializing AI use cases in a complex information system" className="h-auto w-full max-w-[300px]" /></div>
+  return <div className="mb-6 flex h-28 items-center justify-center p-0"><UseCaseIllustration type="legacy" alt="High-criticality modernization and delivery" className="h-auto w-full max-w-[300px]" /></div>
 }
 
 export function HomeLanding() {
