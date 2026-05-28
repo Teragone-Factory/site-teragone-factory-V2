@@ -57,7 +57,7 @@ const data = {
     ],
   },
   fr: {
-    heroText: 'Teragone Factory conçoit et délivre des systèmes logiciels critiques, modernes et durables avec des équipes seniors spécialisées en IA, software craftsmanship, plateformes distribuées et architectures complexes.',
+    heroText: 'Teragone Factory conçoit et délivre des systèmes logiciels critiques avec des équipes seniors spécialisées en ingénierie logicielle, AI engineering, architectures distribuées et environnements techniques complexes.',
     heroPrimary: 'Discutons de votre projet',
     heroSecondary: 'Découvrir nos expertises',
     heroPrimaryHref: '/fr/contact',
