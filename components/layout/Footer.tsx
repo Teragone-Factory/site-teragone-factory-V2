@@ -22,7 +22,7 @@ export function Footer() {
   const navigation = isFrench
     ? [
         { href: '/fr/expertises', label: 'Expertises' },
-        { href: '/fr/use-cases', label: 'Use Cases' },
+        { href: '/fr/use-cases', label: 'Cas d’usage' },
         { href: '/fr/notre-adn', label: 'Notre ADN' },
         { href: '/blog', label: 'Blog' },
         { href: '/fr/nous-rejoindre', label: 'Rejoindre' },
@@ -89,7 +89,7 @@ export function Footer() {
 
         <div className="content-start text-sm text-zinc-400">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">
-            Legal
+            {isFrench ? 'Informations légales' : 'Legal'}
           </p>
 
           <div className="flex flex-col gap-3">
@@ -107,7 +107,7 @@ export function Footer() {
 
           <div className="mt-8">
             <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-zinc-500">
-              Social
+              {isFrench ? 'Réseaux sociaux' : 'Social'}
             </p>
 
             <div className="flex flex-col gap-3">
