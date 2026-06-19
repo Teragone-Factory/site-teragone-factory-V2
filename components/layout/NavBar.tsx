@@ -22,7 +22,7 @@ const frLinks = [
   { href: '/fr/use-cases', label: 'Cas d’usage' },
   { href: '/fr/notre-adn', label: 'Notre ADN' },
   { href: '/fr/advisory-board', label: 'Advisory Board' },
-  { href: '/fr/blog', label: 'Blog' },
+  { href: '/blog', label: 'Blog' },
   { href: '/fr/nous-rejoindre', label: 'Rejoindre' },
 ]
 
