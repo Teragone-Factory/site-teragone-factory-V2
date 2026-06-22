@@ -20,9 +20,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy',
     '/fr',
     '/fr/expertises',
+    '/fr/expertises/audit',
+    '/fr/expertises/delivery',
+    '/fr/expertises/ia-agentique',
+    '/fr/expertises/web3',
     '/fr/use-cases',
     '/fr/notre-adn',
+    '/fr/nous-rejoindre',
     '/fr/contact',
+    '/fr/legal',
+    '/fr/terms',
+    '/fr/cookies',
+    '/fr/privacy',
   ]
 
   return routes.map((route) => ({
