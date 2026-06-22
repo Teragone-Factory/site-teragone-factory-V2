@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Delivery & AI-ready Senior Squads',
   description: 'Senior squads combining AI engineering, software craftsmanship, architecture, DevOps and production-grade delivery.',
-  alternates: { canonical: '/en/expertises/delivery/', languages: { fr: '/expertises/delivery/', en: '/en/expertises/delivery/' } },
+  alternates: { canonical: '/expertises/delivery/', languages: { fr: '/fr/expertises/delivery/', en: '/expertises/delivery/' } },
 }
 
 const sections = [
@@ -47,7 +47,7 @@ export default function DeliveryEN() {
         <h1 className="mt-4 max-w-5xl font-display text-6xl font-bold tracking-tight">AI-augmented senior squads for critical systems.</h1>
         <p className="mt-8 max-w-4xl text-lg leading-8 text-zinc-400">We mobilize senior squads combining software craftsmanship, architecture, DevOps and AI engineering to recover, design, industrialize and operate critical systems with more speed, quality and control.</p>
         <div className="mt-16 grid gap-8 md:grid-cols-2">{sections.map((section) => <ExpertiseDetailCard key={section.title} {...section} />)}</div>
-        <div className="mt-14"><Button href="/en/contact">Discuss your AI-ready squad</Button></div>
+        <div className="mt-14"><Button href="/contact">Discuss your AI-ready squad</Button></div>
       </main>
       <Footer />
     </>
