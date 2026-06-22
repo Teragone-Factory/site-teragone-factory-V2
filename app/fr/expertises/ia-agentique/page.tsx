@@ -6,14 +6,14 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'IA & Systèmes agentiques',
-  description: 'Architectures AI-ready, RAG, orchestration LLM, agents autonomes et intégration enterprise-grade.',
+  description: 'Architectures AI-ready, RAG, orchestration LLM, agents autonomes et intégration en environnement d’entreprise.',
   alternates: { canonical: '/fr/expertises/ia-agentique/', languages: { fr: '/fr/expertises/ia-agentique/', en: '/expertises/ia-agentique/' } },
 }
 
 const items = [
   ['Architectures AI-ready', 'Structurer les applications, données, APIs et workflows pour intégrer durablement l’IA dans le système d’information.'],
   ['RAG & orchestration LLM', 'Connecter les modèles aux connaissances internes, aux outils métiers et aux chaînes de décision avec des mécanismes contrôlés.'],
-  ['Agents & automatisation', 'Concevoir des systèmes agentiques capables d’agir, de tracer, de vérifier et de s’intégrer aux processus existants.'],
+  ['Agents & automatisation', 'Concevoir des systèmes agentiques capables de tracer, vérifier et s’intégrer aux processus existants.'],
 ]
 
 export default function AgenticAIExpertiseFR() {
