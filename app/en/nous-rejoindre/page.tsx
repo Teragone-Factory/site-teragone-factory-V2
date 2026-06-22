@@ -8,7 +8,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Careers',
   description: 'Join Teragone Factory: software engineering, AI, architecture, Web3 and distributed systems.',
-  alternates: { canonical: '/en/nous-rejoindre/', languages: { fr: '/nous-rejoindre/', en: '/en/nous-rejoindre/' } },
+  alternates: { canonical: '/nous-rejoindre/', languages: { fr: '/fr/nous-rejoindre/', en: '/nous-rejoindre/' } },
 }
 
 const roles = [
