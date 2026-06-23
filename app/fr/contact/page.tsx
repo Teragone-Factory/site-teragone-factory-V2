@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contacter Teragone Factory pour vos sujets AI Engineering, architecture, delivery senior et systemes Web3.',
+  description: 'Contacter Teragone Factory pour vos sujets AI Engineering, architecture, delivery senior et syst\u00e8mes Web3.',
 }
 
 export default function ContactPageFR() {
@@ -16,7 +16,7 @@ export default function ContactPageFR() {
         <div className="mb-14 max-w-3xl">
           <span className="text-sm uppercase tracking-[0.3em] text-primary">Contact</span>
           <h1 className="mt-4 font-display text-6xl font-bold tracking-tight">Discutons de votre projet.</h1>
-          <p className="mt-6 text-lg leading-8 text-zinc-400">Architecture, plateformes IA, systemes distribues, squads seniors ou enjeux de modernisation : parlons-en.</p>
+          <p className="mt-6 text-lg leading-8 text-zinc-400">Architecture, plateformes IA, syst\u00e8mes distribu\u00e9s, squads seniors ou enjeux de modernisation : parlons-en.</p>
         </div>
         <ContactForm />
       </main>
