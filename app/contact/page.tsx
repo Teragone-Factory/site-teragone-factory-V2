@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Contact',
   description: 'Contact Teragone Factory regarding AI Engineering, architecture, senior delivery and Web3 systems.',
+  alternates: { canonical: '/contact/', languages: { fr: '/fr/contact/', en: '/contact/' } },
 }
 
 export default function ContactPageEN() {
