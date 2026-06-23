@@ -31,7 +31,7 @@ export default function UseCasesFR() {
       <main className="mx-auto max-w-7xl px-6 py-24 text-white">
         <div className="max-w-4xl"><span className="text-sm uppercase tracking-[0.3em] text-primary">Cas d’usage</span><h1 className="mt-4 font-display text-6xl font-bold tracking-tight">Projets complexes. Résultats concrets.</h1><p className="mt-6 text-lg leading-8 text-zinc-400">Nous intervenons sur des enjeux techniques déterminants : modernisation, plateformes IA, architectures distribuées, delivery senior et systèmes à forte valeur métier.</p></div>
         <div className="mt-10 flex flex-wrap gap-3">{themes.map((theme) => <span key={theme} className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.2em] text-zinc-400">{theme}</span>)}</div>
-        <div className="mt-16 grid gap-6 lg:grid-cols-2">{cases.map((item) => <UseCaseCard key={item.problem} {...item} />)}</div>
+        <div className="mt-16 grid gap-6 lg:grid-cols-2">{cases.map((item) => <UseCaseCard key={item.problem} {...item} locale="fr" />)}</div>
         <section className="mt-24 grid gap-6 md:grid-cols-3">{[['Comprendre', 'Clarifier les contraintes, les risques et les leviers techniques avant d’engager le delivery.'], ['Prioriser', 'Transformer les constats en roadmap pragmatique alignée sur les enjeux métier.'], ['Livrer', 'Mobiliser une équipe senior capable de concevoir, construire et transmettre.']].map(([title, text]) => <Card key={title}><h2 className="font-display text-2xl font-semibold">{title}</h2><p className="mt-4 leading-7 text-zinc-400">{text}</p></Card>)}</section>
       </main>
       <FinalCTAFr />
