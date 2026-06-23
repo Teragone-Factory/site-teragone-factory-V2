@@ -13,6 +13,7 @@ type UseCaseCardProps = {
   thumbnail?: string
   visual?: string
   href?: string
+  locale?: 'fr' | 'en'
 }
 
 function CardVisual({ visual, pillar }: { visual?: string; pillar: string }) {
@@ -26,7 +27,11 @@ function CardVisual({ visual, pillar }: { visual?: string; pillar: string }) {
   return null
 }
 
-export function UseCaseCard({ sector, pillar, problem, story, intervention, benefits, visual, href }: UseCaseCardProps) {
+export function UseCaseCard({ sector, pillar, problem, story, intervention, benefits, visual, href, locale = 'en' }: UseCaseCardProps) {
+  const labels = locale === 'fr'
+    ? { delivered: 'Notre intervention', impact: 'Impact métier', link: 'Voir le cas client' }
+    : { delivered: 'What we delivered', impact: 'Business impact', link: 'View case study' }
+
   const content = (
     <>
       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition group-hover:scale-125" />
@@ -44,11 +49,11 @@ export function UseCaseCard({ sector, pillar, problem, story, intervention, bene
 
         <div className="mt-6 space-y-5 text-sm leading-7 text-zinc-400">
           <p>{story}</p>
-          <p><strong className="text-zinc-200">What we delivered — </strong>{intervention}</p>
-          <p><strong className="text-zinc-200">Business impact — </strong>{benefits}</p>
+          <p><strong className="text-zinc-200">{labels.delivered} — </strong>{intervention}</p>
+          <p><strong className="text-zinc-200">{labels.impact} — </strong>{benefits}</p>
         </div>
 
-        {href && <div className="mt-8 text-sm font-semibold text-primary">View case study <span>→</span></div>}
+        {href && <div className="mt-8 text-sm font-semibold text-primary">{labels.link} <span>→</span></div>}
       </div>
     </>
   )
