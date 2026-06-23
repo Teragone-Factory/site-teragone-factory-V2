@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Web3 & Blockchain Engineering',
   description: 'Distributed systems, blockchain infrastructure, protocol engineering, Web3 platforms, gaming and AI agent integrations.',
-  alternates: { canonical: '/en/expertises/web3/', languages: { fr: '/expertises/web3/', en: '/en/expertises/web3/' } },
+  alternates: { canonical: '/expertises/web3/', languages: { fr: '/expertises/web3/', en: '/en/expertises/web3/' } },
 }
 
 const sections = [
