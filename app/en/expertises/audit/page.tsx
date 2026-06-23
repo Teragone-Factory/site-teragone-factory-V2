@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Audit & Architecture',
   description: 'Architecture audits, technical debt, performance, security, governance and legacy modernization.',
-  alternates: { canonical: '/en/expertises/audit/', languages: { fr: '/expertises/audit/', en: '/en/expertises/audit/' } },
+  alternates: { canonical: '/expertises/audit/', languages: { fr: '/fr/expertises/audit/', en: '/expertises/audit/' } },
 }
 
 const sections = [
