@@ -42,7 +42,7 @@ export default function AuditEN() {
         <h1 className="mt-4 max-w-5xl font-display text-6xl font-bold tracking-tight">Understand, prioritize and secure your critical systems.</h1>
         <p className="mt-8 max-w-4xl text-lg leading-8 text-zinc-400">We deliver action-oriented technical audits covering architecture, technical debt, performance, security, governance, legacy modernization and delivery trajectory.</p>
         <div className="mt-16 grid gap-8 md:grid-cols-2">{sections.map((section) => <ExpertiseDetailCard key={section.title} {...section} />)}</div>
-        <div className="mt-14"><Button href="/en/contact">Start an audit</Button></div>
+        <div className="mt-14"><Button href="/contact">Start an audit</Button></div>
       </main>
       <Footer />
     </>
