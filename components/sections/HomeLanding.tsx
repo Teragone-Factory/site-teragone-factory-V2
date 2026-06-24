@@ -21,11 +21,13 @@ import { UseCaseIllustration } from '@/components/ui/UseCaseIllustration'
 
 const data = {
   en: {
+    heroTitle: 'AI-ready & agent-ready engineering.',
     heroText: 'Teragone Factory designs and delivers critical, modern and durable software systems with senior teams specialized in AI, software craftsmanship, distributed platforms and complex architectures.',
     heroPrimary: 'Discuss your project',
     heroSecondary: 'Explore our expertise',
     heroPrimaryHref: '/contact',
     heroSecondaryHref: '/expertises',
+    useCasesEyebrow: 'Use Cases',
     useCasesTitle: 'Real projects. Critical systems.',
     useCasesButton: 'View use cases →',
     useCasesHref: '/use-cases',
@@ -57,11 +59,13 @@ const data = {
     ],
   },
   fr: {
+    heroTitle: 'Engineering senior pour systèmes AI-ready et agent-ready.',
     heroText: 'Teragone Factory conçoit et délivre des systèmes logiciels critiques avec des équipes seniors spécialisées en ingénierie logicielle, AI engineering, architectures distribuées et environnements techniques complexes.',
     heroPrimary: 'Discutons de votre projet',
     heroSecondary: 'Découvrir nos expertises',
     heroPrimaryHref: '/fr/contact',
     heroSecondaryHref: '/fr/expertises',
+    useCasesEyebrow: 'Cas d’usage',
     useCasesTitle: 'Des projets réels. Des systèmes critiques.',
     useCasesButton: 'Voir tous les cas clients →',
     useCasesHref: '/fr/use-cases',
@@ -81,14 +85,14 @@ const data = {
     ],
     differentiators: [
       { number: '01', title: 'Senior expertise', text: 'Des profils expérimentés sur des enjeux critiques, capables de décider vite et juste.', icon: '♟' },
-      { number: '02', title: 'AI inside', text: 'L IA est intégrée dans les pratiques, les architectures et les workflows de delivery.', icon: '✦' },
-      { number: '03', title: 'Long-term thinking', text: 'Des choix pensés pour la maintenabilité, la gouvernance et l évolution des plateformes.', icon: '∞' },
+      { number: '02', title: 'AI inside', text: 'L’IA est intégrée dans les pratiques, les architectures et les workflows de delivery.', icon: '✦' },
+      { number: '03', title: 'Long-term thinking', text: 'Des choix pensés pour la maintenabilité, la gouvernance et l’évolution des plateformes.', icon: '∞' },
       { number: '04', title: 'Production focus', text: 'Une obsession simple : livrer des systèmes fiables, observables et exploitables en production.', icon: '◉' },
       { number: '05', title: 'Craft quality', text: 'Des standards élevés de qualité logicielle, tests, documentation et transmission.', icon: '◆' },
     ],
     useCases: [
       { tag: 'Transport & mobilité', title: 'Modernisation et delivery à forte criticité.', text: 'Audit, architecture, squads seniors et mise en production sur des environnements complexes.', visual: 'legacy' },
-      { tag: 'Plateforme IA enterprise', title: 'Industrialisation d usages IA dans un SI complexe.', text: 'RAG, orchestration LLM, gouvernance et intégration durable dans les workflows métiers.', visual: 'ai' },
+      { tag: 'Plateforme IA enterprise', title: 'Industrialisation d’usages IA dans un SI complexe.', text: 'RAG, orchestration LLM, gouvernance et intégration durable dans les workflows métiers.', visual: 'ai' },
       { tag: 'Mithril protocol', title: 'Certification légère et synchronisation blockchain.', text: 'Snapshots certifiés, validation légère et bootstrap rapide pour infrastructures distribuées.', visual: 'mithril' },
     ],
   },
@@ -109,10 +113,10 @@ export function HomeLanding() {
     <>
       <NavBar />
       <main className="overflow-hidden bg-background text-white">
-        <section className="relative border-b border-white/5"><div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.16),transparent_36%)]" /><div className="relative mx-auto grid max-w-7xl gap-20 px-6 py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"><div><div className="mb-8 flex flex-wrap gap-3"><Badge label="AI Engineering" /><Badge label="Web3" /><Badge label="Software Craftsmanship" /><Badge label="Distributed Systems" /></div><h1 className="max-w-5xl font-display text-6xl font-bold leading-[1.02] tracking-tight md:text-8xl">AI-ready & agent-ready engineering.</h1><p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">{content.heroText}</p><div className="mt-10 flex flex-wrap gap-4"><Button href={content.heroPrimaryHref}>{content.heroPrimary}</Button><Button href={content.heroSecondaryHref} variant="outline">{content.heroSecondary}</Button></div></div><AnimatedHeroVisual /></div></section>
+        <section className="relative border-b border-white/5"><div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.16),transparent_36%)]" /><div className="relative mx-auto grid max-w-7xl gap-20 px-6 py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"><div><div className="mb-8 flex flex-wrap gap-3"><Badge label="AI Engineering" /><Badge label="Web3" /><Badge label="Software Craftsmanship" /><Badge label="Distributed Systems" /></div><h1 className="max-w-5xl font-display text-6xl font-bold leading-[1.02] tracking-tight md:text-8xl">{content.heroTitle}</h1><p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">{content.heroText}</p><div className="mt-10 flex flex-wrap gap-4"><Button href={content.heroPrimaryHref}>{content.heroPrimary}</Button><Button href={content.heroSecondaryHref} variant="outline">{content.heroSecondary}</Button></div></div><AnimatedHeroVisual /></div></section>
         <DnaBlock />
         <CredibilitySection />
-        <section className="mx-auto max-w-7xl px-6 py-28"><div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"><SectionHeading eyebrow="Use Cases" title={content.useCasesTitle} /><Button href={content.useCasesHref} variant="ghost">{content.useCasesButton}</Button></div><div className="mt-16 grid gap-6 md:grid-cols-3">{content.useCases.map((item) => <Card key={item.title}><UseCaseThumbnail type={item.visual} /><span className="mb-4 inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">{item.tag}</span><h3 className="mb-4 font-display text-2xl font-semibold">{item.title}</h3><p className="text-sm leading-7 text-zinc-400">{item.text}</p></Card>)}</div></section>
+        <section className="mx-auto max-w-7xl px-6 py-28"><div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"><SectionHeading eyebrow={content.useCasesEyebrow} title={content.useCasesTitle} /><Button href={content.useCasesHref} variant="ghost">{content.useCasesButton}</Button></div><div className="mt-16 grid gap-6 md:grid-cols-3">{content.useCases.map((item) => <Card key={item.title}><UseCaseThumbnail type={item.visual} /><span className="mb-4 inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">{item.tag}</span><h3 className="mb-4 font-display text-2xl font-semibold">{item.title}</h3><p className="text-sm leading-7 text-zinc-400">{item.text}</p></Card>)}</div></section>
         <section className="relative mx-auto max-w-7xl px-6 py-28"><div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_55%)]" /><div className="relative"><SectionHeading eyebrow={content.expertiseEyebrow} title={content.expertiseTitle} description={content.expertiseDescription} /><div className="mt-6 flex flex-wrap gap-3 text-sm text-zinc-500">{content.tags.map((tag) => <span key={tag} className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">{tag}</span>)}</div><div className="mt-16 grid gap-8 md:grid-cols-2">{content.pillars.map((pillar) => <PillarCard key={pillar.title} {...pillar} />)}</div></div></section>
         <DeliveryMethod />
         <section className="relative border-y border-white/5 bg-surface"><div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_85%_70%,rgba(139,92,246,0.10),transparent_35%)]" /><div className="relative mx-auto max-w-7xl px-6 py-28"><div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"><div><span className="text-sm uppercase tracking-[0.3em] text-primary">{content.whyEyebrow}</span><h2 className="mt-4 font-display text-5xl font-bold tracking-tight md:text-6xl">{content.whyTitle}</h2><p className="mt-6 text-lg leading-8 text-zinc-400">{content.whyText}</p></div><div className="grid gap-4 md:grid-cols-2">{content.differentiators.map(({ number, title, text, icon }) => <div key={title} className="group rounded-[1.7rem] border border-white/10 bg-card p-6 transition hover:-translate-y-1 hover:border-primary/40 hover:bg-white/[0.04]"><div className="mb-6 flex items-center justify-between"><span className="font-mono text-xs uppercase tracking-[0.24em] text-primary">{number}</span><div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/20 bg-primary/15 text-xl text-primary shadow-lg shadow-primary/10 transition group-hover:scale-105 group-hover:border-cyan/40 group-hover:text-cyan">{icon}</div></div><h3 className="font-display text-2xl font-semibold text-white">{title}</h3><p className="mt-3 leading-7 text-zinc-400">{text}</p></div>)}</div></div></div></section>
