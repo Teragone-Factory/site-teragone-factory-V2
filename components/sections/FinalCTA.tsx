@@ -14,8 +14,8 @@ export function FinalCTA() {
             Échangeons sur votre contexte, vos contraintes et la meilleure manière de mobiliser une équipe senior.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/contact">Contacter Teragone Factory</Button>
-            <Button href="/expertises" variant="outline">Explorer nos expertises</Button>
+            <Button href="/fr/contact">Contacter Teragone Factory</Button>
+            <Button href="/fr/expertises" variant="outline">Explorer nos expertises</Button>
           </div>
         </div>
       </div>
