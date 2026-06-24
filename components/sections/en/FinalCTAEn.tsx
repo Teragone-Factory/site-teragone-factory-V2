@@ -11,11 +11,11 @@ export function FinalCTAEn() {
             A critical platform, a modernization challenge or an AI initiative to industrialize?
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-            Let’s discuss your context, constraints and the best way to mobilize a senior engineering team.
+            Let us discuss your context, constraints and the best way to mobilize a senior engineering team.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/en/contact">Contact Teragone Factory</Button>
-            <Button href="/en/expertises" variant="outline">Explore our expertise</Button>
+            <Button href="/contact">Contact Teragone Factory</Button>
+            <Button href="/expertises" variant="outline">Explore our expertise</Button>
           </div>
         </div>
       </div>
