@@ -16,6 +16,8 @@ type LegalPageProps = {
 }
 
 export function LegalPage({ eyebrow, title, intro, updated, sections }: LegalPageProps) {
+  const updateLabel = updated.includes('Mai') ? 'Derniere mise a jour' : 'Last update'
+
   return (
     <>
       <NavBar />
@@ -23,7 +25,7 @@ export function LegalPage({ eyebrow, title, intro, updated, sections }: LegalPag
         <span className="text-sm uppercase tracking-[0.3em] text-primary">{eyebrow}</span>
         <h1 className="mt-4 font-display text-6xl font-bold tracking-tight">{title}</h1>
         <p className="mt-8 max-w-4xl text-lg leading-8 text-zinc-400">{intro}</p>
-        <p className="mt-4 text-sm text-zinc-500">Last update: {updated}</p>
+        <p className="mt-4 text-sm text-zinc-500">{updateLabel}: {updated}</p>
 
         <div className="mt-14 space-y-6">
           {sections.map((section) => (
