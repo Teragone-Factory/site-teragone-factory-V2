@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Expertises',
-  description: 'Expertises senior pour plateformes AI-ready, Web3, audits architecture et delivery.',
+  description: 'Expertises senior pour plateformes AI-ready, Web3, audits d’architecture et delivery.',
   alternates: { canonical: '/fr/expertises/', languages: { fr: '/fr/expertises/', en: '/expertises/' } },
 }
 
