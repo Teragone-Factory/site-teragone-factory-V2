@@ -25,7 +25,7 @@ export default function ExpertiseFR() {
       <main className="mx-auto max-w-7xl px-6 py-24 text-white">
         <span className="text-sm uppercase tracking-[0.3em] text-primary">Expertises</span>
         <h1 className="mt-4 max-w-5xl font-display text-6xl font-bold tracking-tight">Ingénierie senior pour systèmes critiques.</h1>
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">Nous accompagnons les DSI, CTO et équipes produit sur les sujets où l’architecture, la qualité d’exécution, l’AI engineering et la robustesse des plateformes sont déterminants.</p>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">Nous accompagnons les DSI, CTO et équipes produit sur les sujets où l’architecture, la qualité d’exécution, l’IA engineering et la robustesse des plateformes sont déterminants.</p>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {expertises.map((item) => <Card key={item.title}><h2 className="mb-4 font-display text-3xl font-semibold">{item.title}</h2><p className="mb-8 leading-7 text-zinc-400">{item.text}</p><Button href={item.href} variant="outline">Découvrir</Button></Card>)}
         </div>
